@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+}
+
+/*********************
+    PAGE'S HEADER
+**********************/
+
+header h1, header h2 {
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    letter-spacing: 5px;
+    margin: 0;
+    padding: .7em 0 0 0;
+}
+
+header h2 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 160px;
+    background-color: rgb(0, 0, 50);
+}
+
+header img {
+    position: absolute;
+    top: 1.5em;
+    left: 2em;
+    width: 80px;
+}
+
+/*********************
+    NAVIGATION MENU 
+**********************/
+nav {
+    position: sticky;
+    top:0px;
+    background-color: rgb(102,102,132);
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(102,102,132);
+    list-style: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    
+}
+nav li {
+    flex: 1 1 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: .2em;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+nav a:hover{
+    background-color:  rgba(250, 250, 250, 0.8);
+    color:  rgba(0, 0, 50, 0.8);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px .2em 12px 2em;
+    text-decoration: none;
+    display: block;
+    box-sizing: content-box;
+    text-align: left;
+    width: 82%;
+  }
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/*********************
+         MAIN 
+**********************/
+
+main {
+    margin-left: 2em;
+}
+
+main h2{
+    text-align: left;
+    font-size: 2.8em;
+    font-weight: 300;
+    width: 100%;
+    height: auto;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color:rgb(0, 0, 85);
+    border-bottom: rgb(0, 0, 85);
+    border-bottom-style: double;
+    width:max-content;
+}
+
+main h3{
+    text-align: left;
+    font-size: 2.25em;
+    font-weight: 200;
+    letter-spacing: 1px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+    margin-top: 1em;
+    margin-bottom: .3em;
+    color:rgb(0, 0, 85);
+}
+
+main h4{
+    text-align: left;
+    font-size: 1.52em;
+    font-weight: 200;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color:rgb(0, 0, 85);
+}
+
+main p {
+    font-size: 16px;
+    width: 90%;
+    text-align: justify;
+    text-justify: auto;
+}
+
+main li > p {
+    margin: 0;
+    text-indent: .5em;
+}
+
+main > ul > li {
+    margin: 10px;
+}
+
+main > ol > li {
+    margin: 10px;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+    margin: 1em 2em;
+    caption-side: top;
+}
+
+table > caption{
+    font-size: 18px;
+}
+
+/* Configure table */
+th {
+    font-size: 16px;
+    padding: .5em;
+    text-align: center;
+}
+
+td {
+    border-bottom: 1px solid black;
+    padding: .5em;
+    font-size: 15px;    
+    text-align: center;
+}
+
+tr {
+    font-size: 14px;
+}
+
+thead tr {
+    background-color: rgb(58, 58, 58);
+    color: white;
+    font-size: 15px;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgba(190, 189, 189, 0.5);
+}
+
+tr th:nth-child(odd){
+    width: 115px;
+}
+
+thead th:nth-child(even){
+    border-right: 2px solid white;
+}
+
+tbody td:nth-child(even){
+    border-right: 2px solid black;
+}
+tbody td:last-child{
+    border-right: none;
+}
+
+main > table ul {
+    margin-bottom: .2em;
+}
