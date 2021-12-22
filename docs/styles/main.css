@@ -166,17 +166,21 @@ main p {
     text-justify: auto;
 }
 
-main li > p {
-    margin: 0;
-    text-indent: .5em;
+main li {
+    margin: 10px;
+    font-size: 16px;
+    width: 90%;
+    text-align: justify;
+    text-justify: auto;
+
 }
 
-main > ul > li {
-    margin: 10px;
+li > ul > li{
+    margin-top: 5px;
 }
 
-main > ol > li {
-    margin: 10px;
+li > p{
+    margin-bottom: 5px;
 }
 
 table {
@@ -220,18 +224,17 @@ tbody tr:nth-child(even){
     background-color: rgba(190, 189, 189, 0.5);
 }
 
-tr th:nth-child(odd){
-    width: 115px;
-}
-
-thead th:nth-child(even){
+#course-schedule th:nth-child(2), 
+#course-schedule th:nth-child(3){
     border-right: 2px solid white;
 }
 
-tbody td:nth-child(even){
+#course-schedule td:nth-child(2),
+#course-schedule td:nth-child(3){
     border-right: 2px solid black;
 }
-tbody td:last-child{
+
+#course-schedule td:last-child{
     border-right: none;
 }
 

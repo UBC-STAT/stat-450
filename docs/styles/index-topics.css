@@ -7,10 +7,10 @@ nav li:nth-child(4) > a {
     text-decoration: underline;
 }
 
-main h2{
+main h2 {
     font-size: 35px;
     position: sticky;
-    top:10px;
+    top: 40px;
     background-color: white;
     color: rgba(0, 0, 100, 0.9 );
     border-bottom: 1px solid black;
