@@ -12,7 +12,7 @@
     <tbody>
         <tr>
             <td>#1</td> 
-            <td>Jan 09 ~ Jan 10</td>
+            <td>Jan 09 ~ Jan 15</td>
             <td style="text-align: left;">
                 <ul>
                     <li>Topic 1</li>
