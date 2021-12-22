@@ -110,9 +110,7 @@
             <td>#7</td>
             <td> Feb 20 ~ Feb 26 </td>
             <td style="text-align: left;">
-                <ul>
-                    <li>Midterm Break</li>
-                </ul>
+                    Midterm Break
             </td>
             <td style="text-align: center;">
                 -  
