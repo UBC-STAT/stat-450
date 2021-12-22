@@ -7,14 +7,14 @@ Here we point to some R resources that can be helpful to you in this course.
 
 #### R for Data Science
 
-This book was written by Hadley Wickham and Garrett Grolemund. It is an incredible book, which we highly
+This book was written by Hadley Wickham and Garrett Grolemund. It is a great book, which we highly
 recommend you to read cover to cover and, most importantly, do the exercises. However, for this course
 the following chapters are more relevant:
 
 - [Chapter 3](https://r4ds.had.co.nz/data-visualisation.html);
 - [Chapter 5](https://r4ds.had.co.nz/transform.html);
-- [Chapters 10 to 13](https://r4ds.had.co.nz/tibbles.html);
-- [Chapters 18 to 21](https://r4ds.had.co.nz/pipes.html);
+- [Chapters 9 to 15](https://r4ds.had.co.nz/tibbles.html);
+- [Chapters 26 to 30](https://r4ds.had.co.nz/pipes.html);
 
 #### Data Science: A First Introduction
 
