@@ -111,14 +111,12 @@
             <td> Feb 20 ~ Feb 26 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>Midterm Break</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
+                    <li>-</li>
                 </ul>           
             </td>
         </tr>
