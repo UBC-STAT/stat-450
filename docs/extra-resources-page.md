@@ -13,8 +13,8 @@ the following chapters are more relevant:
 
 - [Chapter 3](https://r4ds.had.co.nz/data-visualisation.html);
 - [Chapter 5](https://r4ds.had.co.nz/transform.html);
-- [Chapters 9 to 15](https://r4ds.had.co.nz/tibbles.html);
-- [Chapters 26 to 30](https://r4ds.had.co.nz/pipes.html);
+- [Chapters 10 to 13](https://r4ds.had.co.nz/tibbles.html);
+- [Chapters 27 to 30](https://r4ds.had.co.nz/r-markdown.html);
 
 #### Data Science: A First Introduction
 
