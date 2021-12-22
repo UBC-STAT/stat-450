@@ -48,7 +48,7 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 - You must attend the lab section for which you are registered. Some labs are in-person and some are online, please double check your section to see whether it is in-person or online. 
 
 ### Textbook:
-[R For Data Science](https://bookdown.org/rdpeng/artofdatascience/)
+[Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/)
 
 ### Course Assessment:
 
