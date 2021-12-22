@@ -1,5 +1,5 @@
 ## Syllabus
-#### Winter Session 2021/22 Term 1
+#### Winter Session 2021/22 Term 2
 
 ### Time and Place
 - TBD
