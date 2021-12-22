@@ -114,10 +114,8 @@
                     <li>Midterm Break</li>
                 </ul>
             </td>
-            <td style="text-align: left;">
-                <ul>
-                    <li>-</li>
-                </ul>           
+            <td style="text-align: center;">
+                -  
             </td>
         </tr>
         <tr>
