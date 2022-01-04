@@ -51,7 +51,6 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li></li>
                     <li>Lab 2: Intro to <code>tidyverse</code></li>
                 </ul>
             </td>
