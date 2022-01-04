@@ -15,15 +15,21 @@
             <td>Jan 09 ~ Jan 15</td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>Course Presentation: syllabus, goals, structure</li>
+                    <li>Plagiarism</li>
+                    <li>
+                        MRNA case study
+                        <ul>
+                            <li>Introduction: the biology and questions</li>
+                            <li>Reading the data and checking for inconsistencies</li>
+                        </ul>
+                    </li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                    <li>Lab 1: R, RStudio, and Data Frames.</li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -217,6 +223,4 @@
 
 <p>All due dates will be on the last day of the week (Saturday at 23:59:59). Please, plan accordingly.</p>
 
-### Test Dates
-- Midterm: Friday, October 29 during lecture.
-- Final Exam: TBA.
+
