@@ -22,6 +22,7 @@
                         <ul>
                             <li>Introduction: the biology and research questions</li>
                             <li>Reading the data and checking for inconsistencies</li>
+                            <li>Initial exploration: checking the data types, missing data, factor levels</li>
                         </ul>
                     </li>
                 </ul>
@@ -37,15 +38,22 @@
             <td>Jan 16 ~ Jan 22</td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>
+                        MRNA case study
+                        <ul>
+                            <li>EDA: creating some plots with <code>ggplot</code> and calculating some summary quantities</li>
+                            <li>Correlation between proteins and mrna</li>
+                        </ul>
+                    </li>
+                    <li>Factors</li>
+                    <li>Handling missing data</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                    <li></li>
+                    <li>Lab 2: Intro to <code>tidyverse</code></li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -61,7 +69,7 @@
                 <ul>
                     <li>Assignment 1</li>
                     <li>Assignment 2</li>
-                </ul>           
+                </ul>
             </td>
         </tr>
         <tr>
