@@ -2,8 +2,11 @@
 #### Winter Session 2021/22 Term 2
 
 ### Time and Place
-- TBD
 
+- Lectures: Mon/Wed/Fri 9:00 am ~ 10:00 am
+    - Until January 24th, the lectures will be held on Zoom (link on Canvas).
+- Labs: Fridays 3:00 pm ~ 4:00 pm
+    - Until January 24th, the labs will be held on Zoom (link on Canvas).
 
 ### Course Objective
 This course provides the basic statistical toolkit required for the understanding and use of a range of methods for both summarizing and analyzing data, giving a platform for further study of applied Statistics. The emphasis in the course will be the application of these methods to real-life situations from Science.
@@ -13,14 +16,16 @@ One of MATH 101, 103, 105, 120 or SCIE 001
 
 ### Contact
 
-|  Position  |         Name        |      Office Hours     | Location |
-|------------|---------------------|-----------------------|----------|
-| Instructor |   Nancy E. Heckman  |           TBD         |    TBD   |
-| Instructor |     Melissa Lee     |           TBD         |    TBD   |
-| Instructor | Rodolfo Lourenzutti |           TBD         |    TBD   |
+|      Position      |         Name        |      Office Hours     | Location |
+|--------------------|---------------------|-----------------------|----------|
+|     Instructor     |   Nancy E. Heckman  |           TBD         |    TBD   |
+|     Instructor     |     Melissa Lee     |           TBD         |    TBD   |
+|     Instructor     | Rodolfo Lourenzutti |           TBD         |    TBD   |
+| Teaching Assistant |   Giancarlo Diluvi  |           TBD         |    TBD   |
 
 
-Please contact stat200@ugrad.stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc). 
+Please contact the instructors at stat450@stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc).
+
 Please use Piazza discussion board for communications related to:
 
 - Technical issues (problem installing something, finding something);
@@ -32,9 +37,8 @@ You can post anonymous questions on Piazza (only the teaching team will know you
 Please note: The teaching team responds to emails Monday to Friday, and we try our best to answer you as promptly as possible, however, given the large class size it may take a few days to respond. Please be patient if you don't get a response immediately!
 
 ### Course Platforms
-- **Zoom**: ....
-- **Webwork**: There will be weekly webwork online assignments.
-- **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/80799). Please check the Canvas website regularly to keep up-to-date with the course.
+- **Zoom**: Information on Canvas
+- **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/86276). Please check the Canvas website regularly to keep up-to-date with the course.
 - **Piazza**: Piazza will be used for class discussion and questions.
 
 ### Course Structure
@@ -54,15 +58,15 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 |       Assessment        |  Percentage |
 |-------------------------|-------------|
-| Assessment 1            |      50     |
-| Assessment 2            |      50     |
+|         Labs            |      50     |
+|      Projects           |      50     |
 
 - For the due dates of the assignments/exams, refer to the [schedule page](schedule.html).
 
 ### Course Policies
 
 #### Academic Integrity 
-All students are expected to follow UBC's [Academic Honesty and Standards](http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,286,0,0#15620) policy. We encourage students to work together on assignments and labs, however all of your work must be written in your own words. Students must correctly cite references if you quote or use outside sources in your work. Breach of the academic integrity policy may, at a minimum, result in a grade of 0 on the relevant assessment or may result in more serious consequences. 
+All students are expected to follow UBC's [Academic Honesty and Standards](http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,286,0,0#15620) policy. We encourage students to work together on assignments and labs, however all of your work must be written in your own words. Students must correctly cite references if you quote or use outside sources in your work. Breach of the academic integrity policy may, at a minimum, result in a grade of 0 on the relevant assessment or may result in more serious consequences.
 
 Please see UBC's Academic Calendar for detailed policies on Academic Misconduct: http://calendar.ubc.ca/vancouver/index.cfm?tree=3,54,111,0.
 
