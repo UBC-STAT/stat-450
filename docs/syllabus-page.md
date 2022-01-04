@@ -88,7 +88,7 @@ For our in-person meetings in this class, it is important that all of us feel as
 - Students who need to request an exemption to the indoor mask mandate must do so based on one of the grounds for exemption detailed in the [PHO Order on Face Coverings (COVID-19)](https://www2.gov.bc.ca/assets/gov/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer/covid-19/covid-19-pho-order-face-coverings.pdf). Such requests must be made through the [Center for Accessibility](info.accessibility@ubc.ca). Students who cannot wear masks are equally welcome in our class.
 
 - **Vaccination:** If you have not yet had a chance to get vaccinated against Covid-19, vaccines are available to you, free, and on campus: visit [https://planning.ubc.ca/news/how-get-covid-19-vaccine-clinic-ubc](https://planning.ubc.ca/news/how-get-covid-19-vaccine-clinic-ubc) and [http://www.vch.ca/covid-19/covid-19-vaccine](http://www.vch.ca/covid-19/covid-19-vaccine) for more information.
-  - The higher the rate of vaccination in our community overall, the lower the chance of spreading this virus.  You are an important part of the UBC community. Please arrange to get vaccinated if you have not already done so. 
+  - The higher the rate of vaccination in our community overall, the lower the chance of spreading this virus.  You are an important part of the UBC community. Please arrange to get vaccinated if you have not already done so.
 
 - **Seating in class:** To reduce the risk of Covid transmission, please sit in a consistent area of the classroom each day.  This will minimize your contacts and will still allow for the pedagogical methods planned for this class to help your learning.  
 
@@ -100,7 +100,7 @@ If you’re sick, it’s important that you stay home – no matter what you t
 - Do not come to class if you have Covid symptoms, have recently tested positive for Covid, or are required to quarantine. You can check this website to find out if you should self-isolate or self-monitor: [http://www.bccdc.ca/health-info/diseases-conditions/covid-19/self-isolation#Who](http://www.bccdc.ca/health-info/diseases-conditions/covid-19/self-isolation#Who).
 - Your precautions will help reduce risk and keep everyone safer.  In this class, the marking scheme is intended to provide flexibility so that you can prioritize your health and still be able to succeed. Please contact the instructors at [stat450@stat.ubc.ca](mailto:stat450@stat.ubc.ca) if you have any concerns or need special arrangements.
 
-#### Missing lecture(s) because of illness: 
+#### Missing lecture(s) because of illness:
 
 If you’re sick, it’s important that you **stay home**. Do not come to class. In such case, we suggest you to:
 
