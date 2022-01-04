@@ -41,7 +41,7 @@
                     <li>
                         MRNA case study
                         <ul>
-                            <li>EDA: creating some plots with <code>ggplot</code> and calculating some summary quantities</li>
+                            <li>EDA: creating plots with <code>ggplot</code> and calculating some summary quantities</li>
                             <li>Correlation between proteins and mrna</li>
                         </ul>
                     </li>
@@ -60,14 +60,13 @@
             <td>Jan 23 ~ Jan 29</td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>Clients' projects presentation</li>
+                    <li>More to be added....</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
+                    <li>Lab 3: Working on writing skills</li>
                 </ul>
             </td>
         </tr>
