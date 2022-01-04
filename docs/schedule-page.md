@@ -20,7 +20,7 @@
                     <li>
                         MRNA case study
                         <ul>
-                            <li>Introduction: the biology and questions</li>
+                            <li>Introduction: the biology and research questions</li>
                             <li>Reading the data and checking for inconsistencies</li>
                         </ul>
                     </li>
