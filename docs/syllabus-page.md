@@ -23,7 +23,7 @@ STAT 306
 |     Instructor     |   Nancy E. Heckman  |           TBD         |    TBD   |
 |     Instructor     |     Melissa Lee     |           TBD         |    TBD   |
 |     Instructor     | Rodolfo Lourenzutti |           TBD         |    TBD   |
-| Teaching Assistant |   Giancarlo Diluvi  |           TBD         |    TBD   |
+| Teaching Assistant |   Gian Carlo Diluvi  |           TBD         |    TBD   |
 
 
 Please contact the instructors at stat450@stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc).
