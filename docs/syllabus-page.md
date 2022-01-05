@@ -60,16 +60,80 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 ### Course Assessment:
 
-|       Assessment        |  Percentage |
-|-------------------------|-------------|
-|         Labs            |      50     |
-|      Projects           |      50     |
 
+<div style="display: flex; height: max-content;">
+    <table>
+        <caption>Table 1: Course</caption>
+        <thead>
+            <tr>
+                <th>Deliverable</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Group project</td>
+                <td>X%</td>
+            </tr>
+            <tr>
+                <td>Homeworks</td>
+                <td>Y%</td>
+            </tr>
+            <tr>
+                <td>Written Assignments</td>
+                <td>Z%</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <caption>Table 2: Project</caption>
+        <thead>
+            <tr>
+                <th>Deliverable</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Team Work Contract</td>
+                <td>P1%</td>
+            </tr>
+            <tr>
+                <td>Proposal</td>
+                <td>P2%</td>
+            </tr>
+            <tr>
+                <td>Peer review</td>
+                <td>P3%</td>
+            </tr>
+            <tr>
+                <td>Final Report</td>
+                <td>P4%</td>
+            </tr>
+            <tr>
+                <td>Teammate Evaluation</td>
+                <td>P5%</td>
+            </tr>
+            <tr>
+                <td>Poster Presentation</td>
+                <td>P6%</td>
+            </tr>
+            <tr>
+                <td>Client Interaction</td>
+                <td>P7%</td>
+            </tr>
+            <tr>
+                <td>Individual Report</td>
+                <td>P8%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 - For the due dates of the assignments/exams, refer to the [schedule page](schedule.html).
 
 ### Course Policies
 
-#### Academic Integrity 
+#### Academic Integrity
 
 All students are expected to follow UBC's [Academic Honesty and Standards](http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,286,0,0#15620) policy. We encourage students to work together on assignments and labs, however all of your work must be written in your own words. Students must correctly cite references if you quote or use outside sources in your work. Breach of the academic integrity policy may, at a minimum, result in a grade of 0 on the relevant assessment or may result in more serious consequences.
 
