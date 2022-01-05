@@ -23,14 +23,13 @@
                             <li>Introduction: the biology and research questions</li>
                             <li>Reading the data and checking for inconsistencies</li>
                             <li>Initial exploration: checking the data types, missing data, factor levels</li>
+                            <li>Lab 1: R, RStudio, and Data Frames.</li>
                         </ul>
                     </li>
                 </ul>
             </td>
-            <td style="text-align: left;">
-                <ul>
-                    <li>Lab 1: R, RStudio, and Data Frames.</li>
-                </ul>
+            <td style="text-align: center;">
+                -
             </td>
         </tr>
         <tr>
