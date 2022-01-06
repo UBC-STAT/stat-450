@@ -46,11 +46,12 @@
                     </li>
                     <li>Factors</li>
                     <li>Handling missing data</li>
+                    <li>Lab 2: Intro to <code>tidyverse</code></li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Lab 2: Intro to <code>tidyverse</code></li>
+                    <li>-</li>
                 </ul>
             </td>
         </tr>
@@ -60,12 +61,13 @@
             <td style="text-align: left;">
                 <ul>
                     <li>Clients' projects presentation</li>
+                    <li>Lab 3: Working on writing skills</li>
                     <li>More to be added....</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Lab 3: Working on writing skills</li>
+                    <li>-</li>
                 </ul>
             </td>
         </tr>
