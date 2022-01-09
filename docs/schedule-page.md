@@ -30,7 +30,7 @@
                 </ul>
             </td>
             <td style="text-align: center;">
-                -
+                <ul><li>HW0: Writing in Statistics</li></ul>
             </td>
         </tr>
         <tr>
@@ -50,9 +50,6 @@
                 </ul>
             </td>
             <td style="text-align: left;">
-                <ul>
-                    <li></li>
-                </ul>
             </td>
         </tr>
         <tr>
@@ -73,10 +70,10 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>HW1: plot relation between mRNA to protein</li>
-                    <li>Group Contract</li>
                     <li>Client meeting I: questions</li>
+                    <li>Group Contract</li>
                     <li>Client meeting I: notes</li>
+                    <li>HW1: plot relation between mRNA to protein</li>
                 </ul>
             </td>
         </tr>
@@ -120,8 +117,6 @@
                 </ul>
             </td>
             <td style="text-align: left;">
-                <ul>
-                </ul>
             </td>
         </tr>
         <tr>
@@ -166,9 +161,9 @@
             </td>
             <td style="text-align: left;">
                 <ul>
+                    <li>Peer Review</li>
                     <li>Client meeting II: questions</li>
                     <li>Client meeting II: notes</li>
-                    <li>Peer Review</li>
                 </ul>
             </td>
         </tr>
@@ -178,14 +173,9 @@
             <td style="text-align: left;">
                 <ul>
                     <li>TBD</li>
-                    <li>TBD</li>
                 </ul>
             </td>
             <td style="text-align: left;">
-                <ul>
-                    <li>TBD</li>
-                    <li>TBD</li>
-                </ul>
             </td>
         </tr>
         <tr>
@@ -193,7 +183,6 @@
             <td> March 13 ~ March 19 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>TBD</li>
                     <li>TBD</li>
                 </ul>
             </td>
@@ -214,7 +203,6 @@
             <td style="text-align: left;">
                 <ul>
                     <li>Group Report 2nd Draft</li>
-                    <li>Poster Session</li>
                 </ul>
             </td>
         </tr>
@@ -228,6 +216,7 @@
             </td>
             <td style="text-align: left;">
                 <ul>
+                    <li>Poster Session</li>
                 </ul>
             </td>
         </tr>
