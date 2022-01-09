@@ -47,21 +47,20 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 #### Lectures
 
-
 #### Labs
 
 - **Labs will start the second week of class**
 - We will use R (a freeware) for labs in this course. We also encourage the installation of RStudio (an Integrated Development Environment for R). Detailed information regarding how to download and install these programs can be found on Canvas.
 - You must attend the lab section for which you are registered. Some labs are in-person and some are online, please double check your section to see whether it is in-person or online.
 
-### Textbook:
+### Textbook
+
 [Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/)
 
-### Course Assessment:
-
+### Course Assessment
 
 <div style="display: flex; height: max-content;">
-    <table>
+    <table style="height:wrap-content">
         <caption>Table 1: Course</caption>
         <thead>
             <tr>
@@ -78,6 +77,17 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
                 <td>Group project</td>
                 <td>90%</td>
             </tr>
+        </tbody>
+    </table>
+    <table>
+        <caption>Table 2: Project</caption>
+        <thead>
+            <tr>
+                <th>Deliverable</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td>Team Work Contract</td>
                 <td>5%</td>
