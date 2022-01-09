@@ -1,4 +1,7 @@
 ## Schedule
+
+<p>Please check the due dates on our [Canvas Course Calendar](https://canvas.ubc.ca/calendar?include_contexts=course_86276#view_name=month&view_start=2022-01-09) or click on the assignment in the table above.</p>
+
 <table id="course-schedule">
     <caption>Table 1: Course Calendar</caption>
     <thead>
@@ -30,7 +33,9 @@
                 </ul>
             </td>
             <td style="text-align: center;">
-                <ul><li>HW0: Writing in Statistics</li></ul>
+                <ul>
+                    <li> <a href="https://canvas.ubc.ca/courses/86276/assignments/1080957">HW0: Writing in Statistics</a></li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -70,10 +75,10 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Client meeting I: questions</li>
-                    <li>Group Contract</li>
-                    <li>Client meeting I: notes</li>
-                    <li>HW1: plot relation between mRNA to protein</li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1138858">Client meeting I: questions</a></li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080950">Group Contract</a></li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080942">Client meeting I: notes</a></li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080945">HW1: plot relation between mRNA to protein</a></li>
                 </ul>
             </td>
         </tr>
@@ -96,7 +101,7 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Group Case Proposal</li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080947">Group Case Proposal</a></li>
                 </ul>
             </td>
         </tr>
@@ -136,7 +141,7 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Rmarkdown Individual Report</li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080953">Rmarkdown Individual Report</a></li>
                 </ul>
             </td>
         </tr>
@@ -147,7 +152,7 @@
                     Midterm Break
             </td>
             <td style="text-align: center;">
-                <li>HW2: protein prediction using mRNA</li>
+                <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080948">HW2: protein prediction using mRNA</a></li>
             </td>
         </tr>
         <tr>
@@ -161,9 +166,9 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Peer Review</li>
-                    <li>Client meeting II: questions</li>
-                    <li>Client meeting II: notes</li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080954">Peer Review</a></li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1141758">Client meeting II: questions</a></li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1141762">Client meeting II: notes</a></li>
                 </ul>
             </td>
         </tr>
@@ -188,7 +193,7 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Oral Presentation</li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080949">Oral Presentation</a></li>
                 </ul>
             </td>
         </tr>
@@ -202,7 +207,7 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Group Report 2nd Draft</li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080955">Group Report 2nd Draft</a></li>
                 </ul>
             </td>
         </tr>
@@ -216,7 +221,7 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Poster Session</li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080952">Poster Session</a></li>
                 </ul>
             </td>
         </tr>
@@ -230,14 +235,10 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Revision Final Report</li>
-                    <li>Team Evaluation</li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080956">Revision Final Report</a></li>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080943">Team Evaluation</a></li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
-
-<p>Please check the due dates on our [Canvas Course Calendar](https://canvas.ubc.ca/calendar?include_contexts=course_86276#view_name=month&view_start=2022-01-09) or click on the assignment in the table above.</p>
-
-
