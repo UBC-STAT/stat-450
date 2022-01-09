@@ -42,6 +42,7 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 - **Zoom**: Information on Canvas
 - **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/86276). Please check the Canvas website regularly to keep up-to-date with the course.
 - **Piazza**: Piazza will be used for class discussion and questions.
+- **Slack**: Slack is a chat platform better for real-time messaging. We hope slack can facilitate the interaction between group members. We have created a Workspace for STAT 450. You can [join here](https://join.slack.com/t/stat-450/shared_invite/zt-117sc4fqd-tfT53n8kvfxM4f~~N847TQ).
 
 ### Course Structure
 
@@ -50,8 +51,8 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 #### Labs
 
 - **Labs will start the second week of class**
-- We will use R (a freeware) for labs in this course. We also encourage the installation of RStudio (an Integrated Development Environment for R). Detailed information regarding how to download and install these programs can be found on Canvas.
-- You must attend the lab section for which you are registered. Some labs are in-person and some are online, please double check your section to see whether it is in-person or online.
+- We will use R in this course. We also encourage the installation of RStudio (an Integrated Development Environment for R).
+- You must attend the lab section. It is a crucial component of this course.
 
 ### Textbook
 
@@ -60,7 +61,7 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 ### Course Assessment
 
 <div style="display: flex; height: max-content;">
-    <table style="height:wrap-content">
+    <table style="height:min-content">
         <caption>Table 1: Course</caption>
         <thead>
             <tr>
