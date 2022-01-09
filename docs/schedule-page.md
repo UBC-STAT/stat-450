@@ -23,9 +23,10 @@
                             <li>Introduction: the biology and research questions</li>
                             <li>Reading the data and checking for inconsistencies</li>
                             <li>Initial exploration: checking the data types, missing data, factor levels</li>
-                            <li>Lab 1: R, RStudio, and Data Frames.</li>
+                            <li>EDA: creating plots with <code>ggplot</code> and calculating some summary quantities</li>
                         </ul>
                     </li>
+                    <li>Lab 1: R, RStudio, and Data Frames.</li>
                 </ul>
             </td>
             <td style="text-align: center;">
@@ -40,18 +41,17 @@
                     <li>
                         MRNA case study
                         <ul>
-                            <li>EDA: creating plots with <code>ggplot</code> and calculating some summary quantities</li>
-                            <li>Correlation between proteins and mrna</li>
+                            <li>Wrangling: Combining data sets, pivoting, </li>
+                            <li>Factors</li>
                         </ul>
                     </li>
-                    <li>Factors</li>
-                    <li>Handling missing data</li>
+                    <li>Clients' projects presentation and discussions</li>
                     <li>Lab 2: Intro to <code>tidyverse</code></li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>-</li>
+                    <li></li>
                 </ul>
             </td>
         </tr>
@@ -60,9 +60,15 @@
             <td>Jan 23 ~ Jan 29</td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Clients' projects presentation</li>
-                    <li>Lab 3: Working on writing skills</li>
-                    <li>More to be added....</li>
+                    <li>
+                        MRNA case study
+                        <ul>
+                            <li>Handling missing data</li>
+                            <li>Correlation between proteins and mrna</li>
+                        </ul>
+                    </li>
+                    <li>1st Client Meeting</li>
+                    <li>Lab 3: Git and Github</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -79,8 +85,16 @@
             <td> Jan 30 ~ Feb 05</td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>Writing skills</li>
+                    <li>Clients' cases discussions</li>
+                    <li>
+                        MRNA case study
+                        <ul>
+                            <li>Review: Statistical Analysis in R</li>
+                            <li>Data Splitting</li>
+                        </ul>
+                    </li>
+                    <li>Lab 4: Data Splitting</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -94,15 +108,20 @@
             <td>Feb 06 ~ Feb 12</td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>
+                        MRNA case study
+                        <ul>
+                            <li>Resampling: the <code>infer</code> package</li>
+                            <li>Nested models</li>
+                            <li>Prediction</li>
+                        </ul>
+                    </li>
+                    <li>Lab 5: ANOVA</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                </ul>
             </td>
         </tr>
         <tr>
@@ -110,14 +129,20 @@
             <td> Feb 13 ~ Feb 19 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>
+                        MRNA case study
+                        <ul>
+                            <li>More on Nested models and prediction</li>
+                            <li>In-class activity</li>
+                        </ul>
+                    </li>
+                    <li>Lab 6: Boostrapping</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
                     <li>Rmarkdown Individual Report</li>
-                </ul>           
+                </ul>
             </td>
         </tr>
         <tr>
@@ -135,8 +160,8 @@
             <td> Feb 27 ~ March 05 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>Peer review: how to give and receive feedback</li>
+                    <li>2nd Client Meeting </li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -152,15 +177,15 @@
             <td> March 06 ~ March 12 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>TBD</li>
+                    <li>TBD</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                    <li>TBD</li>
+                    <li>TBD</li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -168,8 +193,8 @@
             <td> March 13 ~ March 19 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>TBD</li>
+                    <li>TBD</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -183,12 +208,12 @@
             <td> March 20 ~ March 26 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Group Report 2nd Draft</li>
-                    <li>Topic </li>
+                    <li>TBD</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
+                    <li>Group Report 2nd Draft</li>
                     <li>Poster Session</li>
                 </ul>
             </td>
@@ -198,14 +223,11 @@
             <td> March 27 ~ April 02 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>TBD</li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
                 </ul>
             </td>
         </tr>
@@ -214,8 +236,7 @@
             <td> April 03 ~ April 09 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>TBD</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -228,6 +249,6 @@
     </tbody>
 </table>
 
-<p>All due dates will be on the last day of the week (Saturday at 23:59:59). Please, plan accordingly.</p>
+<p>Please check the due dates on our [Canvas Course Calendar](https://canvas.ubc.ca/calendar?include_contexts=course_86276#view_name=month&view_start=2022-01-09) or click on the assignment in the table above.</p>
 
 
