@@ -4,9 +4,9 @@
 ### Time and Place
 
 - Lectures: Mon/Wed/Fri 9:00 am ~ 10:00 am
-    - Until January 24th, the lectures will be held on Zoom (link on Canvas).
+  - Until January 24th, the lectures will be held on Zoom (link on Canvas).
 - Labs: Fridays 3:00 pm ~ 4:00 pm
-    - Until January 24th, the labs will be held on Zoom (link on Canvas).
+  - Until January 24th, the labs will be held on Zoom (link on Canvas).
 
 ### Course Objective
 
@@ -23,8 +23,7 @@ STAT 306
 |     Instructor     |   Nancy E. Heckman  |           TBD         |    TBD   |
 |     Instructor     |     Melissa Lee     |           TBD         |    TBD   |
 |     Instructor     | Rodolfo Lourenzutti |           TBD         |    TBD   |
-| Teaching Assistant |   Gian Carlo Diluvi  |           TBD         |    TBD   |
-
+| Teaching Assistant |  Gian Carlo Diluvi  |           TBD         |    TBD   |
 
 Please contact the instructors at stat450@stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc).
 
@@ -53,7 +52,7 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 - **Labs will start the second week of class**
 - We will use R (a freeware) for labs in this course. We also encourage the installation of RStudio (an Integrated Development Environment for R). Detailed information regarding how to download and install these programs can be found on Canvas.
-- You must attend the lab section for which you are registered. Some labs are in-person and some are online, please double check your section to see whether it is in-person or online. 
+- You must attend the lab section for which you are registered. Some labs are in-person and some are online, please double check your section to see whether it is in-person or online.
 
 ### Textbook:
 [Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/)
@@ -72,59 +71,48 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
         </thead>
         <tbody>
             <tr>
-                <td>Group project</td>
-                <td>X%</td>
-            </tr>
-            <tr>
                 <td>Homeworks</td>
-                <td>Y%</td>
+                <td>10%</td>
             </tr>
             <tr>
-                <td>Written Assignments</td>
-                <td>Z%</td>
+                <td>Group project</td>
+                <td>90%</td>
             </tr>
-        </tbody>
-    </table>
-    <table>
-        <caption>Table 2: Project</caption>
-        <thead>
-            <tr>
-                <th>Deliverable</th>
-                <th>Weight</th>
-            </tr>
-        </thead>
-        <tbody>
             <tr>
                 <td>Team Work Contract</td>
-                <td>P1%</td>
+                <td>5%</td>
             </tr>
             <tr>
-                <td>Proposal</td>
-                <td>P2%</td>
-            </tr>
-            <tr>
-                <td>Peer review</td>
-                <td>P3%</td>
-            </tr>
-            <tr>
-                <td>Final Report</td>
-                <td>P4%</td>
-            </tr>
-            <tr>
-                <td>Teammate Evaluation</td>
-                <td>P5%</td>
-            </tr>
-            <tr>
-                <td>Poster Presentation</td>
-                <td>P6%</td>
+                <td>Group Proposal 1st Draft</td>
+                <td>10%</td>
             </tr>
             <tr>
                 <td>Client Interaction</td>
-                <td>P7%</td>
+                <td>15%</td>
             </tr>
             <tr>
-                <td>Individual Report</td>
-                <td>P8%</td>
+                <td>Individual 1st Rmarkdown Report</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>Group Proposal 2nd Draft</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Group Final Report</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Group Oral Presentation</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Group Poster Session</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Individual Assessment on Group Work</td>
+                <td>P5%</td>
             </tr>
         </tbody>
     </table>
