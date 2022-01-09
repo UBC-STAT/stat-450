@@ -67,7 +67,10 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>-</li>
+                    <li>HW1: plot relation between mRNA to protein</li>
+                    <li>Group Contract</li>
+                    <li>Client meeting I: questions</li>
+                    <li>Client meeting I: notes</li>
                 </ul>
             </td>
         </tr>
@@ -82,9 +85,8 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                    <li>Group Case Proposal</li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -114,8 +116,7 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
+                    <li>Rmarkdown Individual Report</li>
                 </ul>           
             </td>
         </tr>
@@ -126,7 +127,7 @@
                     Midterm Break
             </td>
             <td style="text-align: center;">
-                -  
+                <li>HW2: protein prediction using mRNA</li>
             </td>
         </tr>
         <tr>
@@ -140,9 +141,10 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                    <li>Client meeting II: questions</li>
+                    <li>Client meeting II: notes</li>
+                    <li>Peer Review</li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -172,9 +174,8 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                    <li>Oral Presentation</li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -182,15 +183,14 @@
             <td> March 20 ~ March 26 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
+                    <li>Group Report 2nd Draft</li>
+                    <li>Topic </li>
                 </ul>
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                    <li>Poster Session</li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -206,7 +206,7 @@
                 <ul>
                     <li>Assignment 1</li>
                     <li>Assignment 2</li>
-                </ul>           
+                </ul>
             </td>
         </tr>
         <tr>
@@ -220,9 +220,9 @@
             </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>Assignment 1</li>
-                    <li>Assignment 2</li>
-                </ul>           
+                    <li>Revision Final Report</li>
+                    <li>Team Evaluation</li>
+                </ul>
             </td>
         </tr>
     </tbody>

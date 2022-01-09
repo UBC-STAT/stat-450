@@ -123,12 +123,12 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
             </tr>
             <tr>
                 <td>Individual Assessment on Group Work</td>
-                <td>P5%</td>
+                <td>5%</td>
             </tr>
         </tbody>
     </table>
 </div>
-- For the due dates of the assignments/exams, refer to the [schedule page](schedule.html).
+- For the due dates of the assignments, refer to the [schedule page](schedule.html) or [Canvas calendar](https://canvas.ubc.ca/calendar?include_contexts=course_86276#view_name=month&view_start=2022-01-09).
 
 ### Course Policies
 
