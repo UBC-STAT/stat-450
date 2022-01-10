@@ -1,6 +1,6 @@
 ## Schedule
 
-<p>Please check the due dates on our [Canvas Course Calendar](https://canvas.ubc.ca/calendar?include_contexts=course_86276#view_name=month&view_start=2022-01-09) or click on the assignment in the table above.</p>
+<p>Please check the due dates on our <a href="https://canvas.ubc.ca/calendar?include_contexts=course_86276#view_name=month&view_start=2022-01-09">Canvas Course Calendar</a> or click on the assignment in the table above.</p>
 
 <table id="course-schedule">
     <caption>Table 1: Course Calendar</caption>
