@@ -46,12 +46,11 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 ### Course Structure
 
-#### Lectures
 
 #### Labs
 
-- **Labs will start the second week of class**
-- We will use R in this course. We also encourage the installation of RStudio (an Integrated Development Environment for R).
+- Labs will start in the first week of class.
+- We will use RStudio in this course.
 - You must attend the lab section. It is a crucial component of this course.
 
 ### Textbook
