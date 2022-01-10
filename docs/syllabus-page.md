@@ -46,7 +46,6 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 ### Course Structure
 
-
 #### Labs
 
 - Labs will start in the first week of class.
@@ -89,40 +88,40 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
         </thead>
         <tbody>
             <tr>
-                <td>Team Work Contract</td>
-                <td>5%</td>
+                <td style="text-align: left">Team Work Contract</td>
+                <td style="text-align: right">5%</td>
             </tr>
             <tr>
-                <td>Group Proposal 1st Draft</td>
-                <td>10%</td>
+                <td style="text-align: left">Group Proposal 1st Draft</td>
+                <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td>Client Interaction</td>
-                <td>15%</td>
+                <td style="text-align: left">Client Interaction</td>
+                <td style="text-align: right">15%</td>
             </tr>
             <tr>
-                <td>Individual 1st Rmarkdown Report</td>
-                <td>15%</td>
+                <td style="text-align: left">Individual 1st Rmarkdown Report</td>
+                <td style="text-align: right">15%</td>
             </tr>
             <tr>
-                <td>Group Proposal 2nd Draft</td>
-                <td>10%</td>
+                <td style="text-align: left">Group Proposal 2nd Draft</td>
+                <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td>Group Final Report</td>
-                <td>10%</td>
+                <td style="text-align: left">Group Final Report</td>
+                <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td>Group Oral Presentation</td>
-                <td>10%</td>
+                <td style="text-align: left">Group Oral Presentation</td>
+                <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td>Group Poster Session</td>
-                <td>10%</td>
+                <td style="text-align: left">Group Poster Session</td>
+                <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td>Individual Assessment on Group Work</td>
-                <td>5%</td>
+                <td style="text-align: left">Individual Assessment on Group Work</td>
+                <td style="text-align: right">5%</td>
             </tr>
         </tbody>
     </table>
