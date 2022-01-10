@@ -152,7 +152,9 @@
                     Midterm Break
             </td>
             <td style="text-align: center;">
-                <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080948">HW2: protein prediction using mRNA</a></li>
+                <ul>
+                    <li><a href="https://canvas.ubc.ca/courses/86276/assignments/1080948">HW2: protein prediction using mRNA</a></li>
+                </ul>
             </td>
         </tr>
         <tr>
