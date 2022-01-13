@@ -1,0 +1,132 @@
+---
+title: "Lab 1"
+author: "TA: Gian Carlo Diluvi"
+date: "Jan. 14, 2022"
+output:
+  slidy_presentation:
+    footer: "STAT 450"
+    theme: "simplex"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+## welcome!
+
+>- I am Gian Carlo
+>- first-year PhD student at UBC stats
+>- been doing stats consulting for a while
+>- questions, any time: `gian.diluvi@stat.ubc.ca` or slack
+>- info on labs
+>- info on software
+
+
+## R and RStudio
+
+>- I will assume that you already have both R and RStudio installed in your computer
+>- how familiar are you with R on a scale from 1 to 5?
+
+
+## R and RStudio
+
+- from `https://www.r-project.org/`: 
+
+>R is a free software environment for statistical computing and graphics.
+
+>- RStudio is an IDE for R
+
+>- there are other options (ipynb, text editors with R plugins, e.g., vscode or atom)
+
+
+## why RStudio?
+
+RStudio has lots of flexibility. You can:
+
+>- develop code
+>- write documents (with code chunks)
+>- create presentations (like this one)
+>- develop interactive web apps (Shiny)
+>- and create many other cool things (learnr, bookdown, blogdown)
+
+
+
+## why RStudio?
+
+RStudio has many cool features:
+
+>- syntax highlighting, code completion, smart indentation (any decent IDE should do these)
+>- Github integration (most good IDEs do this too)
+>- directory management with Rprojects (not easy in other IDEs)
+>- shortcut to R documentation (which is great in R)
+>- console and scripts in same window (I wish other IDEs had this)
+
+## R tips and best practices
+
+![](https://irudnyts.github.io/images/posts/2019-01-14-r-coding-style-guide/assignment.jpg){width=50%}
+
+(https://irudnyts.github.io/r-coding-style-guide/.)
+
+## working directory
+
+>- it's the directory where R will look (and save) for files
+>- you can check it with `getwd()`
+>- you can change it with `setwd()`; but never do this!
+>- always create an `RProject`
+>- you can do this in the upper right corner of RStudio
+>- rationale: avoids the need for absolute paths, making collaboration and sharing easier
+
+
+## packages
+
+>- R packages contain functions for a given goal
+>- install them via `install.packages("package_name")`
+>- load them via `library(package_name)`
+>- special suite of packages: the tidyverse - more next week
+
+## documentation
+
+>- R has great documentation
+>- in RStudio, type `?some_function` to access the documentation for `some_function`
+>- alternatively, Google! Some packages even have their own websites with examples (e.g., https://dplyr.tidyverse.org/)
+
+
+## documentation
+
+- R has great documentation
+- in RStudio, type `?some_function` to access the documentation for `some_function`
+- alternatively, Google! Some packages even have their own websites with examples (e.g., https://dplyr.tidyverse.org/)
+
+![](https://i.imgflip.com/3y8ca1.jpg)
+
+(https://i.imgflip.com/3y8ca1.jpg.)
+
+
+## resources
+
+these might be useful:
+
+- [STAT 450 Github](https://github.com/UBC-STAT/stat-450), where I will post labs and resources
+- [STAT 545](https://stat545.stat.ubc.ca/) and their amazing
+[Youtube videos](https://www.youtube.com/channel/UCrB-uourf2vxGeBnGjQrA0w/videos) to learn R and the tidyverse
+- Jenny Brian's STAT 545 [book](https://stat545.com/)
+
+
+## computer encryption
+
+>- some clients will request that you use encrypted computers
+>- you can encrypt your own computer if you have a cwl; see
+[https://privacymatters.ubc.ca/encrypt-my-devices#self-encrypt](https://privacymatters.ubc.ca/encrypt-my-devices#self-encrypt)
+>- tl;dr: you can setup a bitlocker if you're running Windows; use FileVault for Mac; or VeraCrypt with Linux
+>- I only know bitlocker and it's basically like another password you enter before logging in
+
+
+
+## next weeks
+
+>- next week we will learn about dplyr and ggplot2
+>- and we will actually have an activity for you to work on
+>- the week after that we will go over git and Github
+>- make sure to install git and open a Github account (detailed instructions to be sent out later)
