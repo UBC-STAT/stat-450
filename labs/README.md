@@ -16,3 +16,6 @@ by Hadley Wickham and Garret Grolemund
 - The Tidyverse [website](https://www.tidyverse.org/)
 - Trevor Campbell's [blog](https://trevorcampbell.me/html/howdoi.html)
 on how to do a research project (some bits useful for consulting)
+- Jenny Brian's
+[Happy Git and GitHub for the useR](https://happygitwithr.com/index.html)
+to get git, GitHub, and RStudio working together
