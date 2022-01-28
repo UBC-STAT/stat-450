@@ -16,6 +16,8 @@ by Hadley Wickham and Garret Grolemund
 - The Tidyverse [website](https://www.tidyverse.org/)
 - Trevor Campbell's [blog](https://trevorcampbell.me/html/howdoi.html)
 on how to do a research project (some bits useful for consulting)
+- .gitignore templates
+[here](https://github.com/github/gitignore/blob/main/TeX.gitignore).
 
 
 ## Version control
