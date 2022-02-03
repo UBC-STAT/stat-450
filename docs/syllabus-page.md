@@ -4,9 +4,9 @@
 ### Time and Place
 
 - Lectures: Mon/Wed/Fri 9:00 am ~ 10:00 am
-  - Until January 24th, the lectures will be held on Zoom (link on Canvas).
+  - Until February 7th, the lectures will be held on Zoom (link on Canvas).
 - Labs: Fridays 3:00 pm ~ 4:00 pm
-  - Until January 24th, the labs will be held on Zoom (link on Canvas).
+  - Until February 7th, the labs will be held on Zoom (link on Canvas).
 
 ### Course Objective
 
@@ -18,24 +18,24 @@ STAT 306
 
 ### Contact
 
-|      Position      |         Name        |      Office Hours     | Location |
-|--------------------|---------------------|-----------------------|----------|
-|     Instructor     |   Nancy E. Heckman  |           TBD         |    TBD   |
-|     Instructor     |     Melissa Lee     |           TBD         |    TBD   |
-|     Instructor     | Rodolfo Lourenzutti |           TBD         |    TBD   |
-| Teaching Assistant |  Gian Carlo Diluvi  |           TBD         |    TBD   |
+|      Position      |         Name        |     
+|--------------------|---------------------|
+|     Instructor     |   Nancy E. Heckman  |         
+|     Instructor     |     Melissa Lee     |          
+|     Instructor     | Rodolfo Lourenzutti |   
+| Writing Instructor |     Estella Qi      |
+| Teaching Assistant |  Gian Carlo Diluvi  |        
 
 Please contact the instructors at stat450@stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc).
 
-Please use Piazza discussion board for communications related to:
+Please use Piazza discussion board or SLACK channel for communications related to:
 
 - Technical issues (problem installing something, finding something);
 - Questions related to the topics of the course;
-- Regrade requests;
 
 You can post anonymous questions on Piazza (only the teaching team will know your name) if you are not comfortable posting with your name attached!
 
-Please note: The teaching team responds to emails Monday to Friday, and we try our best to answer you as promptly as possible, however, given the large class size it may take a few days to respond. Please be patient if you don't get a response immediately!
+Please note: The teaching team responds to emails Monday to Friday, and we try our best to answer you as promptly as possible. Please be patient if you don't get a response immediately!
 
 ### Course Platforms
 
