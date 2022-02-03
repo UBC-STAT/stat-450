@@ -91,12 +91,8 @@
                     <li>Clients' cases discussions</li>
                     <li>
                         MRNA case study
-                        <ul>
-                            <li>Review: Statistical Analysis in R</li>
-                            <li>Data Splitting</li>
-                        </ul>
                     </li>
-                    <li>Lab 4: Data Splitting</li>
+                    <li>Lab 4: Team work on proposals</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -111,14 +107,9 @@
             <td style="text-align: left;">
                 <ul>
                     <li>
-                        MRNA case study
-                        <ul>
-                            <li>Resampling: the <code>infer</code> package</li>
-                            <li>Nested models</li>
-                            <li>Prediction</li>
-                        </ul>
+                        MRNA case study and regression
                     </li>
-                    <li>Lab 5: ANOVA</li>
+                    <li>Lab 5: Logistic regression</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -129,14 +120,7 @@
             <td> Feb 13 ~ Feb 19 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>
-                        MRNA case study
-                        <ul>
-                            <li>More on Nested models and prediction</li>
-                            <li>In-class activity</li>
-                        </ul>
-                    </li>
-                    <li>Lab 6: Boostrapping</li>
+                    <li>  To Be Determined</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -179,7 +163,7 @@
             <td> March 06 ~ March 12 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>TBD</li>
+                    <li>To Be Determined</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -190,7 +174,7 @@
             <td> March 13 ~ March 19 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>TBD</li>
+                    <li>To Be Determined</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -204,7 +188,7 @@
             <td> March 20 ~ March 26 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>TBD</li>
+                    <li>To Be Determined</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -218,7 +202,7 @@
             <td> March 27 ~ April 02 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>TBD</li>
+                    <li>To Be Determined</li>
                 </ul>
             </td>
             <td style="text-align: left;">
@@ -232,7 +216,9 @@
             <td> April 03 ~ April 09 </td>
             <td style="text-align: left;">
                 <ul>
-                    <li>TBD</li>
+                    <li>Poster session</li>
+                    <li> Visit from statistical consultants </li>
+                    <li>  Recap/reflection/revision </li>   
                 </ul>
             </td>
             <td style="text-align: left;">
