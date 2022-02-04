@@ -167,8 +167,6 @@ If you’re sick, it’s important that you **stay home**. Do not come to class.
 
 - Make a connection early in the term to another student or a group of students in the class. You can help each other by sharing notes.
 - Check Canvas regularly. We will post all the resources there.  
-- Use the Piazza online discussion forum for help.
-- Come to virtual office hours.
 - If you are concerned that you will need to miss a particular key activity due to illness, contact us to discuss.
 
 For additional information about academic concessions, see the UBC policy here: [http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,329,0,0](http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,329,0,0).
@@ -178,5 +176,3 @@ For additional information about academic concessions, see the UBC policy here: 
 We, the instructors, will do our best to stay well, but if we are ill, we will not come to class. If that happens, here’s what you can expect:
 
 - Another instructor will substitute.
-- If we are well enough to teach but are taking precautions to avoid infecting others, we will have a synchronous online session. If this happens, you will receive an email and an announcement in Canvas telling you how to join the class.  You can anticipate that this would very likely be a last-minute email.  Our classroom will still be available for you to sit and attend an online session in this (hopefully rare) instance.
-
