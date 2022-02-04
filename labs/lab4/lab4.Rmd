@@ -1,0 +1,33 @@
+---
+title: "Lab 4"
+author: "Gian Carlo Diluvi"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r preamble, appendix=TRUE}
+# preamble -----------------#
+library(knitr)
+library(palmerpenguins)
+#---------------------------#
+
+```
+
+
+Hello this is a report.
+
+```{r tibble, appendix=TRUE}
+#print table ---------------#
+print(penguins)
+#---------------------------#
+```
+
+
+## Appendix
+
+```{r code_appendix, ref.label=all_labels(appendix == TRUE), echo=TRUE, eval=FALSE}
+```
+
