@@ -1,0 +1,293 @@
+---
+title: 'HW1: mRNA to protein plots'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+library(tidyverse)
+library(ggplot2)
+```
+
+## General Instructions
+
+1. Answer all questions in this R Markdown document. 
+
+2. Leave all chunks visible so that we can check your code.
+
+3. Click the **Knit** button to generate a PDF document that includes content, chunk and output.
+
+4. Upload PDF file to Canvas.
+
+5. All questions are worth 1 point. 
+
+6. You can find great documentation with examples of most function you will use in this assignment in the following link: [https://dplyr.tidyverse.org/reference/](https://dplyr.tidyverse.org/reference/).
+
+## Case Study: relation between mRNA to protein levels
+
+Despite expectations of a high correlation between mRNA and protein levels, experimental results have shown very low correlation values. 
+
+In class, we have been working with a data set from a research group that wants to investigate the relation between mRNA and protein levels.
+
+In this assignment, you will practice your data wrangling skills and create reports with Rmd.
+
+## 1. Loading the data 
+
+
+### Question 1.1
+
+Use `read_csv` to load the mRNA and protein data. They are stored in the data folder. Store them in variables with meaningful names.
+Make sure all the column names are appropriate.
+
+```{r Question-1.1, message=FALSE}
+# Your answer goes here.
+
+### BEGIN SOLUTION
+prot_raw <- 
+  read_csv("data/proteinUN.csv") %>% 
+  rename(gene = ...1)
+
+mrna_raw <- 
+  read_csv("data/geneUN.csv") %>% 
+  rename(gene = ...1)
+### END SOLUTION
+```
+
+### Question 1.2. 
+How many tissues (from organs) have been analyzed?
+
+```{r Question-1.2}
+# Your answer goes here
+
+### BEGIN SOLUTION
+ncol(prot_raw) - 1
+ncol(mrna_raw) - 1
+### END SOLUTION
+```
+
+### Question 1.3
+Are the dimensions of the mRNA and Proteins data sets the same?
+
+```{r Question-1.3}
+# Your answer goes here
+
+### BEGIN SOLUTION
+dim(prot_raw)
+dim(mrna_raw)
+### END SOLUTION
+```
+
+## 2. Getting data ready - Tyding the data 
+
+### Question 2.1
+
+Gather the tissue columns in the protein data frame and put them in a column called `tissues`, and the values in a column called `protein`. Do the same thing for the mRNA data frame, but name the value column as `mrna`. Remember to save the results in different objects than the original data. (Hint: take a look at the function `pivot_longer`).   
+
+```{r Question-2.1}
+# Your answer goes here
+
+### BEGIN SOLUTION
+prot_longer <- 
+  prot_raw %>% 
+  pivot_longer(!gene, names_to = 'tissues', values_to = "prot")
+
+mrna_longer <- 
+  mrna_raw %>% 
+  pivot_longer(!gene, names_to = 'tissues', values_to = "mrna")
+
+head(prot_longer)
+head(mrna_longer)
+### END SOLUTION
+```
+### Question 2.2: 
+
+Join the datasets you obtained in Question 2.1 and save the result in an object called `mrna_prot`.
+
+```{r Question-2.2}
+# Your answer goes here
+
+### BEGIN SOLUTION
+mrna_prot <- 
+  prot_longer %>% 
+  inner_join(mrna_longer)
+
+head(mrna_prot)
+### END SOLUTION
+```
+
+### Question 2.3: 
+
+Use the `group_by` and `summarise` functions to obtain the _mean_, _std. dev._ of the protein and mrna levels per gene, as well as the number of complete observations (i.e., the number of tissues that have both, mrna and protein levels) in columns named: `mean_prot`, `sd_prot`, `mean_mrna`, `sd_mrna`, and `n_comp_obs`. 
+Remove the `NA` in the calculation. Save the result in an object named `summary_mrna_prot`.
+
+
+```{r Question-2.3}
+# Your answer goes here
+
+### BEGIN SOLUTION
+summary_mrna_prot <- 
+  mrna_prot %>% 
+  group_by(gene) %>% 
+  summarise(mean_prot = mean(prot, na.rm = TRUE),
+            sd_prot = sd(prot, na.rm = TRUE),
+            mean_mrna = mean(mrna, na.rm = TRUE),
+            sd_mrna = sd(mrna, na.rm = TRUE),
+            n_comp_obs = sum(!is.na(prot) & !is.na(mrna)))
+
+head(summary_mrna_prot)
+### END SOLUTION
+```
+
+
+### Question 2.4 
+
+Using the `filter` and `nrow` functions, obtain how many genes have mRNA and protein levels in _all_ 12 tissues.
+
+
+```{r Question-2.4}
+# Your answer goes here
+
+### BEGIN SOLUTION
+summary_mrna_prot %>% 
+  filter(n_comp_obs == 12) %>% 
+  nrow()
+### END SOLUTION
+```
+### Question 2.5 
+
+Let's bring the information in the `summary_mrna_prot` into our `tibble` `mrna_prot` with the data. (Hint: see `left_join`.)
+Remember to save the data. 
+
+```{r Question-2.5}
+# Your answer goes here
+
+### BEGIN SOLUTION
+mrna_prot <- 
+  mrna_prot %>% 
+  left_join(summary_mrna_prot)
+
+head(mrna_prot, 20)
+### END SOLUTION
+```
+
+
+### Question 2.6  
+
+Is the missing information dependent on the organ? In other words, do some organs' tissues
+have more missing data than others? To answer this, let's calculate the proportion of 
+genes with `prot` and/or `mrna` missing for each tissue. 
+
+If the genes in our sample were randomly selected, we could even calculate the confidence interval 
+for the proportions. Although the assumption of randomly selected genes is not true, for the sake
+of discussion, let's still include an approximate 95% confidence interval $\hat{p}\pm 1.96\times \sqrt{\hat{p}(1-\hat{p})/n}$.
+
+Save it in an object named `prop_missing_mrna_prot`. (_Hint: again, you'll need `group_by` and `summarise`_).
+
+```{r Question-2.6}
+# Your answer goes here
+
+### BEGIN SOLUTION
+prop_missing_mrna_prot <- 
+  mrna_prot %>%
+  group_by(tissues) %>% 
+  summarise(p_hat = sum(is.na(prot) | is.na(mrna)) / n(),
+            lower_ci = p_hat - 1.96 * sqrt(p_hat*(1-p_hat)/n()),
+            upper_ci = p_hat + 1.96 * sqrt(p_hat*(1-p_hat)/n()))
+prop_missing_mrna_prot
+### END SOLUTION
+
+```
+
+### Question 2.7  
+
+The summary you stored in `prop_missing_mrna_prot` is very useful but hard to read and compare all the numbers. 
+Let's use `ggplot2` to create a visualization that will help us to interpret the table. 
+
+We will walk you through creating the visualization in the scaffolding below. 
+
+(Note: remember that our gene sample might not be random, so the validity of these CI are questionable).
+
+```{r Question-2.7-scaffolding,eval=FALSE}
+prop_missing_mrna_prot %>% 
+  ggplot(aes(x = ..., # We want one bar per tissue
+             y = ..., # the estimate proportion
+             colour = ... # let's give different colors for each tissue
+             )
+         ) + 
+  geom_...() + # replace the three dots with the 
+  geom_errorbar(aes(ymin = ..., # the lower limit of the confidence interval
+                    ymax = ..., # the upper limit of the confidence interval
+                    width = .2 # this value controls the size of horizontal bar (try changing it)) 
+                    ))  +
+  theme(axis.title.x = element_blank(), # You don't need to worry about this code
+        axis.text.x = element_blank(),  # it is only to remove the x-axis.
+        axis.ticks.x = element_blank())
+
+```
+
+```{r Question-2.7}
+### BEGIN SOLUTION
+
+prop_missing_mrna_prot %>% 
+  ggplot(aes(x = tissues, # We want one bar per tissue
+             y = p_hat, # the estimate proportion
+             colour = tissues # let's give different colors for each tissue
+             )
+         ) + 
+  geom_point() + # replace the three dots with the 
+  geom_errorbar(aes(ymin = lower_ci, # the lower limit of the confidence interval
+                    ymax = upper_ci, # the upper limit of the confidence interval
+                    width = .2 # this value controls the size of horizontal bar (try changing it)) 
+                    ))  +
+  theme(axis.title.x = element_blank(), # You don't need to worry about this code
+        axis.text.x = element_blank(),  # it is only to remove the x-axis.
+        axis.ticks.x = element_blank())
+### END SOLUTION
+```
+
+
+
+## 3. Genes and Sampling 
+
+#### Question 3.1
+
+Select four different genes with no missing data, using the `select`, `unique`, `filter`, and `slice_sample` functions. To make sure we can reproduce your plot, we will set the 
+seed to 450. Save the result in an object named `sample_genes`. Make sure your code 
+cannot select the same gene more than once. 
+
+```{r Question 3.1}
+set.seed(450) # do not erase this. 
+
+# Your answer goes here. 
+
+### BEGIN SOLUTION
+sample_genes <- 
+  mrna_prot %>%
+  filter(n_comp_obs == 12) %>% 
+  select(gene) %>% 
+  unique() %>% 
+  slice_sample(n = 4) %>% 
+  pull()
+
+sample_genes
+### END SOLUTION
+```
+
+#### Question 3.2
+
+Create a scatter plot that illustrates the relation between mRNA and protein for the selected genes; colour the points by tissue type. 
+Use the `facet_wrap` function to separate the plots for each gene. 
+
+```{r Question-3.2}
+
+# Your answer goes here. 
+
+### BEGIN SOLUTION
+mrna_prot %>% 
+  filter(gene %in% sample_genes) %>% 
+  ggplot(aes(mrna, prot, color = tissues)) + 
+  geom_point() + 
+  facet_wrap(~gene)
+### END SOLUTION
+```
