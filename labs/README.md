@@ -7,6 +7,7 @@ Each subdirectory contains all the files necessary to generate the lab.
 
 ## Useful resources
 
+### Misc
 - [STAT 545](https://stat545.stat.ubc.ca/) and their amazing
 [Youtube videos](https://www.youtube.com/channel/UCrB-uourf2vxGeBnGjQrA0w/videos) to learn R and the tidyverse
 - Jenny Brian's STAT 545 free online [book](https://stat545.com/)
@@ -14,13 +15,16 @@ Each subdirectory contains all the files necessary to generate the lab.
 by Hadley Wickham and Garret Grolemund
 - RStudio [cheetsheats](https://www.rstudio.com/resources/cheatsheets/)
 - The Tidyverse [website](https://www.tidyverse.org/)
+- Trevor Campbell's [How to explain things]
+(https://docs.google.com/presentation/d/13vwchlzQAZjjfiI3AiBC_kM-syI6GJKzbuZoLxgy1a4/edit?usp=sharing)
+talk
 - Trevor Campbell's [blog](https://trevorcampbell.me/html/howdoi.html)
 on how to do a research project (some bits useful for consulting)
 - .gitignore templates
-[here](https://github.com/github/gitignore/blob/main/TeX.gitignore).
+[here](https://github.com/github/gitignore/blob/main/TeX.gitignore)
 
 
-## Version control
+### Version control
 
 - Jenny Brian's
 [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html)
@@ -33,3 +37,8 @@ is a nice git GUI that works for mac, Windows, and Linux
 - [Sourcetree](https://www.sourcetreeapp.com/)
 and [GitHub desktop](https://desktop.github.com/)
 are git GUIs for mac and Windows
+
+
+### Generalized linear models
+
+- Logistic regression: https://bookdown.org/egarpor/PM-UC3M/glm.html
