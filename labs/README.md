@@ -41,4 +41,17 @@ are git GUIs for mac and Windows
 
 ### Generalized linear models
 
-- Logistic regression: https://bookdown.org/egarpor/PM-UC3M/glm.html
+- Original [paper](https://www.jstor.org/stable/2344614?seq=1#metadata_info_tab_contents)
+ by Nelder and Wedderburn (1972)
+- [Book](http://www.utstat.toronto.edu/~brunner/oldclass/2201s11/readings/glmbook.pdf)
+by McCullagh and Nelder (1989)
+- [GLMs Wikipedia](https://en.wikipedia.org/wiki/Generalized_linear_model)
+and its really nice
+[link functions table](https://en.wikipedia.org/wiki/Generalized_linear_model#Link_function)
+- [Exponential family Wikipedia](https://en.wikipedia.org/wiki/Exponential_family)
+and its really nice
+[table](https://en.wikipedia.org/wiki/Exponential_family#Table_of_distributions)
+with some of its members
+- A deeper look at the Challenger disaster data in the Notes for Predictive Modeling
+[book](https://bookdown.org/egarpor/PM-UC3M/glm-challenger.html)
+by Eduardo García Portugués
