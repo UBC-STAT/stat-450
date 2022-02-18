@@ -1,0 +1,42 @@
+% Author: Ben Bloem-Reddy
+% Adapted by Gian Carlo Diluvi for personal use
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+\setlength{\oddsidemargin}{0.0 in}
+\setlength{\evensidemargin}{0.0 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{8.5 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+
+\titleformat*{\section}{\Large\bfseries}
+
+
+\newcommand{\printtitle}{
+    \thispagestyle{plain}
+    \newpage
+    \noindent
+    \begin{center}
+        {\LARGE Title of the report} \\
+        {\large Client: Dr. Steve TheClient, Cool Affiliation}
+        \vskip 5mm
+        {\large \begin{tabular}{cccc} Alice McConsultant & Bob CoolAuthor \end{tabular}} \\
+        {\large STAT 450 Consulting Report} \\
+        {\large February 2022} \\
+        \vskip 5mm
+        {\large Department of Statistics} \\
+        {\large University of British Columbia}
+    \end{center}
+
+  \pagestyle{fancy}
+  \fancyhf{}
+  \lhead{STAT 450: Case Studies in Statistics}
+  \rhead{McConsultant, CoolAuthor}
+  \cfoot{\thepage}
+}

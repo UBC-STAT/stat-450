@@ -1,0 +1,123 @@
+---
+output: 
+  pdf_document:
+    keep_tex: yes
+header-includes:
+    - \input{report-template}
+    - \input{latex-macros}
+---
+
+\printtitle
+
+
+\section{Introduction}
+some cool text.
+
+You can use shorTeX for LaTeX macros in R:
+https://github.com/trevorcampbell/shortex.
+
+\newpage
+
+lorem ipsum
+
+
+```{r preamble, include=FALSE, message=FALSE, echo=FALSE, appendix=TRUE}
+# R setup ------------------------------------#
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(tidy = FALSE)
+library(tidyverse)
+library(ggplot2)
+ggplot2::theme_set(theme_classic())
+library(palmerpenguins)
+library(kableExtra)
+#--------------------------------------------#
+
+```
+
+
+
+# Tables with kable and kableExtra
+
+Now let's do some nice tables.
+
+```{r table1, appendix=TRUE}
+# table 1 ------------------------#
+table <- 
+  penguins %>% 
+  tidyr::drop_na() %>% 
+  dplyr::group_by(species,sex) %>% 
+  dplyr::summarise(mean_body_mass_g = mean(body_mass_g)) %>% 
+  dplyr::ungroup()
+table
+#--------------------------------------------#
+
+```
+
+
+
+```{r table1-kable, appendix=TRUE}
+# table 1 kable ------------------------#
+knitr::kable(table, booktabs = TRUE,
+             col.names = c("Species", "Sex", "Average body mass (g)"),
+             align = 'llc',
+             digits = 1,
+             format.args = list(big.mark = ","),
+             caption = "Palmer penguins' average body mass in grams by species and sex.",
+             label = "table:kable")
+#--------------------------------------------#
+
+```
+
+```{r table1-kableExtra, appendix=TRUE}
+# table 1 kableExtra ------------------------#
+knitr::kable(table %>% dplyr::select(-species), booktabs = TRUE,
+             col.names = c("Species and sex", "Average body mass (g)"),
+             align = 'lc',
+             digits = 1,
+             format.args = list(big.mark = ","),
+             caption = "Palmer penguins' average body mass in grams by species and sex.",
+             label = "table:kableExtra") %>% 
+  kableExtra::pack_rows(index = table(table$species))
+#--------------------------------------------#
+
+```
+
+The labels are important because you can refer to the tables like so:
+compare Table \ref{table:kable} with Table \ref{table:kableExtra}.
+
+Check out https://bookdown.org/yihui/rmarkdown-cookbook/tables.html for more tips!
+Also the documentation for `kableExtra` here: https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf.
+
+\FloatBarrier
+\newpage
+
+
+
+# Other interesting tips
+
+You can print values of R variables in text.
+
+```{r avg-body-mass, appendix=TRUE}
+# calculate avg body mass ----------------#
+avg_body_mass <- mean(penguins$body_mass_g, na.rm = TRUE)
+#-----------------------------------------#
+
+```
+
+The average body mass in grams of all penguins is `r avg_body_mass`.
+You can also use `round` and `scales::comma` to make it better-looking, 
+so that it prints like so:
+the average body mass in grams of all penguins is `r scales::comma(round(avg_body_mass,0))`.
+
+You can find more tips chunk tips in here: https://yihui.org/knitr/options/.
+
+
+
+\FloatBarrier
+\newpage
+# Appendix: Code
+
+```{r all-code, ref.label=all_labels(appendix == TRUE), echo=TRUE, eval=FALSE}
+```
