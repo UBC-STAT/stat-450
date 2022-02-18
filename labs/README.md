@@ -15,8 +15,7 @@ Each subdirectory contains all the files necessary to generate the lab.
 by Hadley Wickham and Garret Grolemund
 - RStudio [cheetsheats](https://www.rstudio.com/resources/cheatsheets/)
 - The Tidyverse [website](https://www.tidyverse.org/)
-- Trevor Campbell's [How to explain things]
-(https://docs.google.com/presentation/d/13vwchlzQAZjjfiI3AiBC_kM-syI6GJKzbuZoLxgy1a4/edit?usp=sharing)
+- Trevor Campbell's [How to explain things](https://docs.google.com/presentation/d/13vwchlzQAZjjfiI3AiBC_kM-syI6GJKzbuZoLxgy1a4/edit?usp=sharing)
 talk
 - Trevor Campbell's [blog](https://trevorcampbell.me/html/howdoi.html)
 on how to do a research project (some bits useful for consulting)
