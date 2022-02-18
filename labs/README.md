@@ -55,3 +55,14 @@ with some of its members
 - A deeper look at the Challenger disaster data in the Notes for Predictive Modeling
 [book](https://bookdown.org/egarpor/PM-UC3M/glm-challenger.html)
 by Eduardo García Portugués
+
+### Rmarkdown and TeX
+
+- [R Markdown cookbok](https://bookdown.org/yihui/rmarkdown-cookbook/)
+by Jihui Xie, Christophe Dervieux, and Emily Riederer
+- [shortex](https://github.com/trevorcampbell/shortex) is a
+ LaTeX package by Trevor Campbell and collaborators with lots of useful
+ redefinitions and conventions
+ - [kableExtra documentation](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)
+ with lots of examples
+ - [knitr book](https://yihui.org/knitr/) by Yihui Xie
