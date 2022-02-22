@@ -16,6 +16,8 @@ some cool text.
 You can use shorTeX for LaTeX macros in R:
 https://github.com/trevorcampbell/shortex.
 
+We have to cite something so: we are using R \citep{R}.
+
 \newpage
 
 lorem ipsum
@@ -113,6 +115,11 @@ the average body mass in grams of all penguins is `r scales::comma(round(avg_bod
 
 You can find more tips chunk tips in here: https://yihui.org/knitr/options/.
 
+
+
+\clearpage
+\bibliographystyle{abbrvnat}
+\bibliography{ref}
 
 
 \FloatBarrier
