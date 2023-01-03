@@ -65,7 +65,7 @@ If someone violates the Code of Conduct during a STAT 450 event or in an online
 space outside of organised events, we ask that you report it to the instructor.
 
 - [Prof. Melissa Lee](mailto:melissa.lee@stat.ubc.ca)
-- [Prof. Nancy E. Heckman](mailto:nancy@stat.ubc.ca)
+- [Prof. Keegan Korthauer](mailto:keegan@stat.ubc.ca)
 - [Prof. Rodolfo Lourenzutti](mailto:lourenzutti@stat.ubc.ca)
 
 ### Attribution
