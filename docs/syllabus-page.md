@@ -108,7 +108,7 @@ You can also get if for free here, but it appears the learnpub version is more r
                 <td style="text-align: right">5%</td>
             </tr>
             <tr>
-                <td style="text-align: left">Group Proposal 1st Draft</td>
+                <td style="text-align: left">Group Proposal </td>
                 <td style="text-align: right">5%</td>
             </tr>
             <tr>
@@ -116,11 +116,11 @@ You can also get if for free here, but it appears the learnpub version is more r
                 <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td style="text-align: left">Individual 1st Rmarkdown Report</td>
+                <td style="text-align: left">Individual written 1st Report</td>
                 <td style="text-align: right">15%</td>
             </tr>
             <tr>
-                <td style="text-align: left">Group Proposal 2nd Draft</td>
+                <td style="text-align: left">Group Written 2nd Draft</td>
                 <td style="text-align: right">10%</td>
             </tr>
             <tr>
