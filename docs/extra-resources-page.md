@@ -23,6 +23,19 @@ This is the textbook of DSCI 100, and it was written by Prof. Tiffany Timbers, P
 - [Chapter 3 - Cleaning and wrangling data](https://ubc-dsci.github.io/introduction-to-datascience/wrangling.html);
 - [Chapter 4 - Effective data visualization](https://ubc-dsci.github.io/introduction-to-datascience/viz.html)
 
+#### Other References: 
+1. B.S. Everitt and T. Hothorn (2010). A Handbook of Statistical Analyses Using R, 2nd edition, Chapman & Hall. 
+1. C. Chatfield (1995). Problem Solving: A Statistician's Guide, 2nd edition, Chapman & Hall. 
+1. M.J. Crawley (2007). The R Book, Wiley. 
+1. P. Dalgaard (2008). Introductory Statistics with R, 2nd edition, Springer. 
+1. N. Lange, L. Ryan, L. Billard, D. Brillinger, L. Conquest and J. Greenhouse (1994). Case Studies in Biometry, Wiley. 
+1. J. Maindonald and W.J. Braun (2010). Data Analysis and Graphics Using R, 3rd edition. Cambridge. 
+1. D. Nolan and T. Speed (2000). Stat Labs: Mathematical Statistics Through Applications, Springer. 
+1. R. Peck, L.D. Haugh and A. Goodman (1998). Statistical Case Studies: A Collaboration Between Academe and Industry, SIAM. 
+1. P. Spector (1994). An Introduction to S and S-Plus, Duxbury. 
+1. J.D. Spurrier (2000). The Practice of Statistics: Putting the Pieces Together, Duxbury. 
+1. W.N. Venables and B.D. Ripley (2002). Modern Applied Statistics with S, 4th edition, Springer. 
+
 
 ### Cheatsheets
 
