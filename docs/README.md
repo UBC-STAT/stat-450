@@ -1,1 +1,1 @@
-# [Webpage for STAT 450](https://github.com/UBC-STAT/stat-450.git)
+## [Webpage for STAT 450](https://ubc-stat.github.io/stat-450/)
