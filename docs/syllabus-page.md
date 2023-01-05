@@ -153,11 +153,14 @@ All students are expected to follow UBC's [Academic Honesty and Standards](http:
 
 Please see UBC's Academic Calendar for detailed policies on Academic Misconduct: http://calendar.ubc.ca/vancouver/index.cfm?tree=3,54,111,0.
 
-#### Classroom Policy 
-Please see the link for UBC's latest [COVID-19 campus rules](https://srs.ubc.ca/covid-19/ubc-campus-rules-guidance-documents/)
+#### Health and Safety
 
-#### Instructor health
+Please follow the current [UBC COVID-19 Campus Rules](https://srs.ubc.ca/covid-19/ubc-campus-rules-guidance-documents/) regarding self-monitoring, and staying home if you are sick. Although masks are no longer required on campus, please respect the choices of your fellow students and the instructional team who may continue to wear masks. 
 
 We, the instructors, will do our best to stay well, but if we are ill, we will not come to class. If that happens, here’s what you can expect:
 - Another instructor will substitute.
 - Class may take place over Zoom. 
+
+#### Privacy
+
+This course requires students to work and communicate on github.com and Slack. Please be advised that the material and information you put on GitHub and Slack will be stored on servers outside of Canada. Data used for these tools may not be protected, as they have not gone through a Privacy Impact Assessment (PIA) and been identified as FIPPA compliant. When you access GitHub or Slack, you will be required to create an account. While both tools have a privacy policy ([GitHub privacy policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement), [Slack privacy policy](https://slack.com/trust/privacy/privacy-policy)), UBC cannot guarantee security of your private details on servers outside of Canada. Please exercise caution whenever providing personal information. You may wish to use a pseudonym to protect your privacy if you have concerns. If you choose to do so, you will need to inform the instructional team of your alias. Please feel free to contact UBC (<access.and.privacy@ubc.ca>) or the support team for GitHub or Slack if you have any questions.
