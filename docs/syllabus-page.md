@@ -50,7 +50,8 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 ### Course Platforms
 
 - **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/110122). Please check the Canvas website regularly to keep up-to-date with the course.
-- **Slack**: Slack is a chat platform better for real-time messaging. We hope slack can facilitate the interaction between group members. We have created a Workspace for STAT 450. You can [join here](https://join.slack.com/t/stat-450/shared_invite/zt-1mvn70my8-4mTDnkLcVvI5yvfRgYPgjA) (Link expires Feb 3).
+- **Slack**: Slack is a chat platform better for real-time messaging. We hope slack can facilitate the interaction between group members. We have created a [Workspace for STAT 450](https://stat540students.slack.com). You will first need to join using the invitation link posted on Canvas (Link expires Feb 3).
+- **GitHub**: You will carry out assignments and group work using GitHub for code development and version control. 
 
 ### Course Structure
 
@@ -152,10 +153,10 @@ All students are expected to follow UBC's [Academic Honesty and Standards](http:
 
 Please see UBC's Academic Calendar for detailed policies on Academic Misconduct: http://calendar.ubc.ca/vancouver/index.cfm?tree=3,54,111,0.
 
-### Classroom Policy 
-Please see the link for UBC's latest COVID-19 campus rules: https://srs.ubc.ca/covid-19/ubc-campus-rules-guidance-documents/
+#### Classroom Policy 
+Please see the link for UBC's latest [COVID-19 campus rules](https://srs.ubc.ca/covid-19/ubc-campus-rules-guidance-documents/)
 
-### Instructor health
+#### Instructor health
 
 We, the instructors, will do our best to stay well, but if we are ill, we will not come to class. If that happens, here’s what you can expect:
 - Another instructor will substitute.
