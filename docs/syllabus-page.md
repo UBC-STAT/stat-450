@@ -63,11 +63,9 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 ### Textbook
 
-Available for free in LeanPub under a sliding payment scale method. If you click the "Book" option you, you can get an electronic copy for free or you can pay what you can and/or want for the textbook. 
+Available for free in [LeanPub](https://leanpub.com/artofdatascience) (Links to an external site) under a sliding payment scale method. If you click the "Book" option you, you can get an electronic copy for free or you can pay what you can and/or want for the textbook. 
 
-https://leanpub.com/artofdatascienceLinks to an external site.
-
-You can also get if for free here, but it appears the learnpub version is more recent:  https://bookdown.org/rdpeng/artofdatascience/
+You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience/), but it appears the learnpub version is more recent.
 
 ### Course Assessment
 
