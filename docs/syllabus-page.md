@@ -141,9 +141,20 @@ You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience
         </tbody>
     </table>
 </div>
-- For the due dates of the assignments, refer to the Canvas calendar.
+- For the due dates and details of the assignments, refer to Canvas.
 
 ### Course Policies
+
+#### Academic Concession
+
+Deadlines are all by 11:59 pm (Pacific time) on the due date. Any submission or modification after the due date will not be graded unless you have requested an extension. If you anticipate having trouble meeting a deadline and need an [academic concession](https://students.ubc.ca/enrolment/academic-learning-resources/academic-concessions), please reach out in advance via email to the instructors. [Here](https://stat540-ubc.github.io/course-admin/concession_template.pdf) is a template you can use for a self-declaration.
+
+If you miss class, we suggest you to:
+
+- Consult the class resources on Canvas
+- Use the class Slack workspace to discuss missed material with classmates
+- Visit office hours
+- Seek academic concessions, if applicable
 
 #### Academic Integrity
 
