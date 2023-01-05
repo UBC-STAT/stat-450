@@ -151,7 +151,7 @@ You can also get if for free here, but it appears the learnpub version is more r
 
 All students are expected to follow UBC's [Academic Honesty and Standards](http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,286,0,0#15620) policy. We encourage students to work together on assignments and labs, however all of your work must be written in your own words. Students must correctly cite references if you quote or use outside sources in your work. Breach of the academic integrity policy may, at a minimum, result in a grade of 0 on the relevant assessment or may result in more serious consequences.
 
-Please see UBC's Academic Calendar for detailed policies on Academic Misconduct: http://calendar.ubc.ca/vancouver/index.cfm?tree=3,54,111,0.
+Please see UBC's Academic Calendar for detailed policies on [Academic Misconduct](http://calendar.ubc.ca/vancouver/index.cfm?tree=3,54,111,0).
 
 #### Health and Safety
 
