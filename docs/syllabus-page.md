@@ -1,10 +1,10 @@
 ## Syllabus
-#### Winter Session 2022/23 Term 2
+#### Winter Session 2023/24 Term 2
 
 ### Time and Place
 
-- Lectures: Mon/Wed/Fri 9:00 am - 10:00 am in ESB 4192
-- Labs: Fridays 3:00 pm - 4:00 pm in ESB 1042
+- Lectures: Wed/Fri 9:00 am - 10:30 am in ESB 4192
+- Labs: Fridays 3:00 pm - 4:00 pm in EOS 135
 
 
 ### Course Description 
@@ -36,7 +36,7 @@ STAT 306. Restricted to 4th year Statistics majors.
 |     Instructor     |     Melissa Lee     |          
 |     Instructor     | Rodolfo Lourenzutti |   
 | Writing Instructor |     Estella Qi      |
-| Teaching Assistant |      Chloe You      |        
+| Teaching Assistant |      TBA      |        
 
 Please contact the instructors at stat450@stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc).
 
@@ -49,8 +49,8 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 ### Course Platforms
 
-- **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/110122). Please check the Canvas website regularly to keep up-to-date with the course.
-- **Slack**: Slack is a chat platform better for real-time messaging. We hope slack can facilitate the interaction between group members. We have created a [Workspace for STAT 450](https://stat540students.slack.com). You will first need to join using the invitation link posted on Canvas (Link expires Feb 3).
+- **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/132908). Please check the Canvas website regularly to keep up-to-date with the course.
+- **Slack**: Slack is a chat platform better for real-time messaging. We hope slack can facilitate the interaction between group members. We have created a [Workspace for STAT 450](https://stat540students.slack.com). You will first need to join using the invitation link posted on Canvas (Link expires XX).
 - **GitHub**: You will carry out assignments and group work using GitHub for code development and version control. 
 
 ### Course Structure
