@@ -12,7 +12,7 @@ environments such as Slack and GitHub. Students will also advance their skills i
 
 ### Meetings and course structure
 
-The class has 3 times listed as lectures (Mon, Wed, Fri, 9-10) and 1 time listed as a lab (Fri 3-4). Students must register in and attend both, the lectures and the labs.
+The class has 2 times listed as lectures (Wednesdays and Fridays, 9-10:30) and 1 time listed as a lab (Fri 3-4). Students must register in and attend both, the lectures and the labs.
 
 Please note that the structure of this course is different from other statistics courses. Students do not work on data sets from textbooks or the web, but rather on real world projects submitted by external partners. Therefore student learning will be focused on the problems that arise from the projects, with the teaching team providing guidance to the students. Some of the instruction may have a more classical format if the topics are beneficial to most of the class’s projects.
 
