@@ -180,7 +180,7 @@ We, the instructors, will do our best to stay well, but if we are ill, we will n
 
 #### Extreme Environmental Conditions Contingency Plan
 
-In-person, on campus activities may need to be cancelled due to issues such as weather conditions (e.g., snow). The most up-to-date information about cancellations will be posted on [ubc.ca](ubc.ca). Please check [ubc.ca](ubc.ca) often during times when an extreme weather event could disrupt our course activities. Here is what you can expect in the event an in-person lecture or lab session is cancelled:
+In-person, on campus activities may need to be cancelled due to issues such as weather conditions (e.g., snow). The most up-to-date information about cancellations will be posted on [ubc.ca](https://www.ubc.ca/). Please check [ubc.ca](https://www.ubc.ca/) often during times when an extreme weather event could disrupt our course activities. Here is what you can expect in the event an in-person lecture or lab session is cancelled:
 
 Depending on the nature of the planned in-class activities, class may take place over Zoom (in this case, Zoom link will be posted on Canvas), or an alternate activity may be posted on Canvas for you to complete before the next scheduled class. We will communicate over Slack to announce the specifics for each case that arises as soon as we can.
 
