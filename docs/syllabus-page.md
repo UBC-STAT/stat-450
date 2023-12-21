@@ -36,7 +36,7 @@ STAT 306. Restricted to 4th year Statistics majors.
 |     Instructor     |     Melissa Lee     |          
 |     Instructor     | Rodolfo Lourenzutti |   
 | Writing Instructor |     Estella Qi      |
-| Teaching Assistant |      TBA      |        
+| Teaching Assistant |      Jonathan Agyeman      |        
 
 Please contact the instructors at stat450@stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc).
 
@@ -115,8 +115,16 @@ You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience
                 <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td style="text-align: left">Individual written 1st Report</td>
-                <td style="text-align: right">15%</td>
+                <td style="text-align: left">Group Written 1st Report</td>
+                <td style="text-align: right">10%</td>
+            </tr>
+            <tr>
+                <td style="text-align: left">Individual In-Class Questions about Project</td>
+                <td style="text-align: right">5%</td>
+            </tr>
+            <tr>
+                <td style="text-align: left">Midterm Peer Assessment on Group Work</td>
+                <td style="text-align: right">2.5%</td>
             </tr>
             <tr>
                 <td style="text-align: left">Group Written 2nd Draft</td>
@@ -135,8 +143,8 @@ You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience
                 <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td style="text-align: left">Individual Assessment on Group Work</td>
-                <td style="text-align: right">5%</td>
+                <td style="text-align: left">Final Peer Assessment on Group Work</td>
+                <td style="text-align: right">2.5%</td>
             </tr>
         </tbody>
     </table>
@@ -168,8 +176,18 @@ Please follow the current [UBC COVID-19 Campus Rules](https://srs.ubc.ca/covid-1
 
 We, the instructors, will do our best to stay well, but if we are ill, we will not come to class. If that happens, here’s what you can expect:
 - Another instructor will substitute.
-- Class may take place over Zoom. 
+- Class may take place over Zoom (in this case, Zoom link will be posted on Canvas). 
+
+#### Extreme Environmental Conditions Contingency Plan
+
+In-person, on campus activities may need to be cancelled due to issues such as weather conditions (e.g., snow). The most up-to-date information about cancellations will be posted on [ubc.ca](ubc.ca). Please check [ubc.ca](ubc.ca) often during times when an extreme weather event could disrupt our course activities. Here is what you can expect in the event an in-person lecture or lab session is cancelled:
+
+Depending on the nature of the planned in-class activities, class may take place over Zoom (in this case, Zoom link will be posted on Canvas), or an alternate activity may be posted on Canvas for you to complete before the next scheduled class. We will communicate over Slack to announce the specifics for each case that arises as soon as we can.
 
 #### Privacy
 
 This course requires students to work and communicate on github.com and Slack. Please be advised that the material and information you put on GitHub and Slack will be stored on servers outside of Canada. Data used for these tools may not be protected, as they have not gone through a Privacy Impact Assessment (PIA) and been identified as FIPPA compliant. When you access GitHub or Slack, you will be required to create an account. While both tools have a privacy policy ([GitHub privacy policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement), [Slack privacy policy](https://slack.com/trust/privacy/privacy-policy)), UBC cannot guarantee security of your private details on servers outside of Canada. Please exercise caution whenever providing personal information. You may wish to use a pseudonym to protect your privacy if you have concerns. If you choose to do so, you will need to inform the instructional team of your alias. Please feel free to contact UBC (<access.and.privacy@ubc.ca>) or the support team for GitHub or Slack if you have any questions.
+
+#### Use of class time
+
+Discussions during our scheduled class time are intended to relate to the learning outcomes for the course.
