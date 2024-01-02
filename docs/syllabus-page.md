@@ -155,7 +155,7 @@ You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience
 
 #### Academic Concession
 
-Deadlines are all by 11:59 pm (Pacific time) on the due date. Any submission or modification after the due date will not be graded unless you have requested an extension. If you anticipate having trouble meeting a deadline and need an [academic concession](https://students.ubc.ca/enrolment/academic-learning-resources/academic-concessions), please reach out in advance via email to the instructors. [Here](https://stat540-ubc.github.io/course-admin/concession_template.pdf) is a template you can use for a self-declaration.
+Please see Canvas for course deadlines. Any submission or modification after the due date will not be graded unless you have requested an extension. If you anticipate having trouble meeting a deadline and need an [academic concession](https://students.ubc.ca/enrolment/academic-learning-resources/academic-concessions), please reach out in advance via email to the instructors. [Here](https://stat540-ubc.github.io/course-admin/concession_template.pdf) is a template you can use for a self-declaration.
 
 If you miss class, we suggest you to:
 
