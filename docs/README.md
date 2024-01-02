@@ -1,1 +1,0 @@
-## [Webpage for STAT 450](https://ubc-stat.github.io/stat-450/)
