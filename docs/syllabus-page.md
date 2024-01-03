@@ -81,7 +81,11 @@ You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience
         <tbody>
             <tr>
                 <td>Homeworks</td>
-                <td>10%</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Lecture Attendance</td>
+                <td>5%</td>
             </tr>
             <tr>     
                 <td>Labs</td>
