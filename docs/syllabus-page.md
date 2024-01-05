@@ -3,8 +3,8 @@
 
 ### Time and Place
 
-- Lectures: Wed/Fri 9:00 am - 10:30 am in ESB 4192
-- Labs: Fridays 3:00 pm - 4:00 pm in EOS 135
+- Lectures: Wed/Fri 9:00 am - 10:30 am (Building and Room number posted on Canvas)
+- Labs: Fridays 3:00 pm - 4:00 pm (Building and Room number posted on Canvas)
 
 
 ### Course Description 
