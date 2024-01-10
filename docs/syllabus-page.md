@@ -50,7 +50,7 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 ### Course Platforms
 
 - **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/132908). Please check the Canvas website regularly to keep up-to-date with the course.
-- **Slack**: Slack is a chat platform better for real-time messaging. We hope slack can facilitate the interaction between group members. We have created a [Workspace for STAT 450](https://stat540students.slack.com). You will first need to join using the invitation link posted on Canvas.
+- **Slack**: Slack is a chat platform better for real-time messaging. We hope slack can facilitate the interaction between group members. We have created a [Workspace for STAT 450](https://stat-450.slack.com). You will first need to join using the invitation link posted on Canvas.
 - **GitHub**: You will carry out assignments and group work using GitHub for code development and version control. 
 
 ### Course Structure
