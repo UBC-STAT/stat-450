@@ -1,0 +1,276 @@
+---
+title: "Lab 2"
+author: |
+  |
+  | TA:Jonathan Agyeman
+  |
+  | slides by Gian Carlo Diluvi
+  |
+date: "Jan. 19, 2024"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(learnr)
+library(tidyverse)
+library(palmerpenguins)
+pgs <- penguins
+```
+
+## Welcome!
+
+Today: 
+
+- `dplyr` and `ggplot2`
+- create a Github account (instructions later)
+- submit Lab 2 'Assignment' onto Canvas for marks
+
+
+## Download lab 2 material
+
+- Go to the course's Canvas
+- On Home, scroll to the end until you find the Labs module
+- Click on Lab 2 and follow the instructions there
+
+Let me know if you get stuck.
+
+
+## Recap of `ggplot2` basics
+
+- Plots are built by layers
+- There are three aspects we need to specify: 
+  - data: what are you plotting
+  - aesthetics: how variables in data are going to be used in plot (e.g., *x* and *y* axes)
+  - geometries: what type of display you are going to use (e.g., scatter plot, histogram, lines)
+  
+![](https://datasciencebook.ca/img/frontmatter/ds-a-first-intro-cover.jpg){width=50%}
+
+(Data Science: A First Introduction)
+
+
+
+## Palmer penguins
+
+- Data set from Horst, Hill, and Horman (2020) with information about three species of penguins
+
+![](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png){width=90%}
+
+(artwork by @allison_horst.)
+
+Goal for today: I will answer a potential client's question, then you will do the same
+
+First, let's see the palmer penguins data set, which is called `pgs`:
+
+```{r intro1, exercise=TRUE, exercise.lines = 1}
+pgs
+```
+
+a good practice is to check for NA and poke around the data first:
+```{r data-smell-test, exercise=TRUE, exercise.lines = 4}
+dim(pgs) # 344 penguins
+
+pgs %>% 
+  summarise_all(~ sum(is.na(.x))) # summarizes an important fact (e.g., the number of NA’s) per column
+```
+
+Side note: This is called purr-style lambda, starting with a tilde `~` and 
+using `.x` in the function refers to every individual column that has been selected.
+
+Decide how to deal with data anomalies and missing data:
+
+```{r remove-na, exercise=TRUE, exercise.lines = 3}
+pgs <- pgs %>% drop_na()
+
+dim(pgs) # 333 penguins
+```
+
+
+## Question for TA
+
+**Do male penguins have a larger body mass than female penguins?**
+
+
+### Attempt 1: `dplyr`
+
+Idea: calculate the mean body mass by penguin sex.
+
+```{r ta1, exercise=TRUE, exercise.lines = 3}
+
+```
+
+Seems like males have a larger body mass on average!
+
+
+### Visualization
+
+But the key term above is *on average*.
+We should create a visualization to understand the whole distribution... ideas?
+
+```{r ta2, exercise=TRUE, exercise.lines = 3}
+
+```
+
+Hmmm, it seems that we have multimodal distributions for body mass.
+Any ideas why?
+How can we address this?
+
+
+### Back to wrangling
+
+
+```{r ta3, exercise=TRUE, exercise.lines = 3}
+
+```
+
+Aha! *On average*, male penguins have a larger body mass within each species.
+The discrepancy above occurred because some species (Gentoo) are just much larger,
+females included.
+
+Problem: how can we visualize this intuition to present to a client?
+
+### Visualization again
+
+```{r ta4, exercise=TRUE, exercise.lines = 4}
+
+```
+
+Neat! As a final step, let's tweak the plot to make it better-looking.
+
+### Tweaking final plot
+
+```{r ta5, exercise=TRUE, exercise.lines = 8}
+
+```
+
+
+### Answer to client
+
+
+We have to write an actual answer that accompanies the visualization we just created. Help!
+
+```{r ta6}
+question_text("Answer to the client:",
+              answer("blah", correct = TRUE),
+              allow_retry = TRUE)
+```
+
+
+
+## Question for you
+
+Is there a relationship between bill length and bill depth? (either positive, negative, or none.)
+
+![](https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png){width=70%}
+
+
+### Visualization
+
+First, visualize the relationship between bill length and bill depth using a scatter plot.
+Fill in the `...` bits below.
+*Hint:* `geom_point` is the geometry for scatter plots.
+
+
+```{r st1, exercise=TRUE, exercise.lines = 3}
+pgs %>% 
+  ggplot(aes(x = ..., y = ...)) +
+  ...()
+```
+
+
+Can you answer the client's question?
+*Hint:* Do you notice three clusters in the plot above? Why could that be? 
+Think about the example we did together before.
+```{r st2}
+quiz(
+  question("Are there any other variables in the data set that could be affecting this analysis?",
+           answer("species", correct = TRUE),
+           answer("island"),
+           answer("bill length"),
+           answer("bill depth"),
+           answer("body mass")
+           )
+)
+```
+
+
+### Wrangling
+
+Let's calculate the average bill length and depth by species.
+Fill in the `...` bits below.
+
+```{r st3, exercise=TRUE, exercise.lines = 4}
+pgs %>% 
+  ...(species) %>% 
+  ...(avg_bill_length = mean(...),
+      avg_bill_depth = ...(bill_depth_mm))
+```
+
+
+Do you notice any big difference between species?
+
+### Visualization again
+
+Let's recreate our original plot but now using `color = species` as an aesthetic.
+Fill in the `...` bits below.
+
+```{r st4, exercise=TRUE, exercise.lines = 3}
+pgs %>% 
+  ggplot(aes(x = ..., y = ..., color = ...)) +
+  ...()
+```
+
+
+Success! Now tweak your plot 
+Fill in the `...` bits below and play with point size and transparency. 
+(There isn't a correct answer here!)
+
+```{r st5, exercise=TRUE, exercise.lines = 3}
+pgs %>% 
+  ggplot(aes(x = ..., y = ..., color = ...)) +
+  ...(size = ..., alpha = ...) +
+  labs(x = "...",
+       y = "...",
+       color = "...")
+```
+
+
+Now let's get our answer to the client.
+```{r st6}
+quiz(
+  question("Is there a relationship between bill length and bill depth?",
+           answer("There isn't any relationship at all"),
+           answer("There is a positive relationship, but within species", correct = TRUE),
+           answer("There is a negative relationship, but within species")
+           )
+)
+```
+
+
+## More resources
+
+You're done with the activity. Great job!
+I hope that activity was useful. Here are some resources for `dplyr` and `ggplot2`:
+
+- [R for data science](https://r4ds.had.co.nz/) book by Wickham (creator of `ggplot2`) and Grolemund
+- [Data science: a first introduction](https://ubc-dsci.github.io/introduction-to-datascience/) by our own Melissa Lee, 
+Tiffany Timbers, and Trevor Campbell
+- [STAT 545 youtube videos](https://www.youtube.com/channel/UCrB-uourf2vxGeBnGjQrA0w/videos) - they have follow-up videos on `ggplot2` 
+and also a series on `dplyr` (plus more on the `tidyverse`)
+- [STAT 450 labs repo](https://github.com/UBC-STAT/stat-450/tree/master/labs), where I will post these and more resources
+
+
+## Before you go
+
+Create a Github account if you haven't already - it's free! (And you get Github pro for free with a UBC email). Instructions:
+
+- Go to [github.com](github.com)
+- Click Sign up
+- Enter your email, password, and create a username (called handle)
+
+After you create your account, **submit your Github handle on Canvas in Lab2**. 
+It'll help us assign you to the repo of your project.
+
+
+Now go enjoy your Friday!
