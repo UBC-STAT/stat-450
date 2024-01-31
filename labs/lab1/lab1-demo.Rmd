@@ -1,0 +1,95 @@
+---
+title: "Lab 1 Demo"
+author: "Chloe You"
+date: "2023-01-13"
+output:
+  html_document:
+    df_print: paged
+  word_document: default
+subtitle: General Workflow and Emphasis on Dataframes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Create new project?
+2. Check working directory. `getwd()` and `setwd()`
+3. Housekeeping code: load libraries, load data
+
+Short code for R script chunk
+
+Windows : Ctrl + Alt + I
+
+Mac : Command + Option + I
+
+
+```{r, load-data, warning=FALSE, message=FALSE, include = FALSE}
+# install.packages("gapminder")
+library(gapminder)
+library(dplyr)
+## if local csv file
+# dat <- read.csv("data/data.name.csv") # ?read.csv
+dat <- gapminder # in our case we load it directly from package
+```
+
+Examine data!
+
+## Demo 2
+```{r, include=FALSE}
+dplyr::glimpse(dat) 
+str(dat)
+#View(dat) ###Look at the entire dataset
+head(dat)
+tail(dat)
+dim(dat)
+nrow(dat)
+ncol(dat)
+sum(is.na(dat$country)) # missing data
+
+dat
+```
+Inline code can be called as `r colnames(dat)`. The key is wrapping your R code in `r ` before putting them in your text. 
+
+The mean life expectancy is `r round(mean(dat$lifeExp),2)`
+
+We can also get the summary statistics and knit them into the report directly:
+```{r}
+knitr::kable(summary(dat),digits = 2, caption = "Summary Statistics")
+```
+
+## Demo 3 for Dataframes
+
+Some useful ways to access cells in dataframes:
+```{r}
+dat[5,] # [row, column]
+
+# dat$country
+dat$country[2] # second row in the country column
+
+```
+Or we can (and we encourage you to) use the `dplyr` way to manipulate dataframes:
+
+To extract rows which correspond to the year 2007 and select only the variables `country` and `pop` using the `dplyr` package:
+```{r}
+library(dplyr)
+filter(dat, year == 2007) %>% 
+  select(country, pop) # select columns
+
+###Ctrl + Shift + m  %>% 
+```
+
+Finally we can try plotting the data too (with captions in the report too!)
+```{r boxplot, fig.cap= "Life expectancy by continent"}
+boxplot(lifeExp ~ continent , data = dat)
+```
+
+
+```{r scatterplot, fig.cap= "Life expectancy by log GDP per capita, coloured by continent"}
+plot(lifeExp ~ log(gdpPercap), col=continent, dat=dat, xlab = "GDP per Capita",
+     ylab = "Life Length")
+```
+
+And before you shut off RStudio, remember to save workspace so you can always come back to the same data, models next session!
+
+
