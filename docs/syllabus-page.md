@@ -1,10 +1,10 @@
 ## Syllabus
-#### Winter Session 2023/24 Term 2
+#### Winter Session 2024/25 Term 2
 
 ### Time and Place
 
-- Lectures: Wed/Fri 9:00 am - 10:30 am (Building and Room number posted on Canvas)
-- Labs: Fridays 3:00 pm - 4:00 pm (Building and Room number posted on Canvas)
+- Lectures: Wed/Fri 9:00 am - 10:20 am (Building and Room number posted on Canvas)
+- Labs: Fridays 3:00 pm - 3:50 pm (Building and Room number posted on Canvas)
 
 
 ### Course Description 
@@ -13,7 +13,7 @@ This course provides the basic statistical toolkit required for the understandin
 ### Course Objective
 To train students to apply their statistical knowledge to applied research problems, to develop skills of working with non-statisticians either as a consultant or as a collaborator, and to communicate effectively, both orally and in writing, with statisticians and non-statisticians. 
 
-Most course activities will be organized around a series of case studies based on recent and current applied research problems from different subject-areas. Students will participate in: 
+Most course activities will be organized around a series of case studies based on recent and current applied research problems from different subject areas. Students will participate in: 
 
 - formulation of statistical approaches to these applied research problems,
 - written and oral presentations of proposed statistical approaches,
@@ -22,7 +22,7 @@ Most course activities will be organized around a series of case studies based o
 - critical and interactive discussion of all aspects of the case study.
 - Methodological topics that arise in the case studies will be discussed as necessary. 
 
-Students will work individually and in groups in different class activities and assignments. Throughout the term, students will work in groups on real case studies. Each team will be supervised and supported by the teaching team. Each student will make oral presentations of their team’s work throughout the term and the teams will submit written reports of their work.  The grande finale is a semi-public poster session, at the end of the semester.  Note:  each team will need to split the costs of poster printing. 
+Students will work individually and in groups in different class activities and assignments. Throughout the term, students will work in groups on real case studies. Each team will be supervised and supported by the teaching team. Each student will make oral presentations of their team’s work throughout the term, and the teams will submit written reports of their work.  The grand finale is a semi-public poster session at the end of the semester.  Note:  each team will need to split the costs of poster printing. 
 
 ### Prerequisites
 
@@ -36,7 +36,7 @@ STAT 306. Restricted to 4th year Statistics majors.
 |     Instructor     |     Melissa Lee     |          
 |     Instructor     | Rodolfo Lourenzutti |   
 | Writing Instructor |     Estella Qi      |
-| Teaching Assistant |      Jonathan Agyeman      |        
+| Teaching Assistant |   Gian Carlo Di-Luvi      |        
 
 Please contact the instructors at stat450@stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc).
 
@@ -49,8 +49,8 @@ Please note: The teaching team responds to emails Monday to Friday, and we try o
 
 ### Course Platforms
 
-- **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/132908). Please check the Canvas website regularly to keep up-to-date with the course.
-- **Slack**: Slack is a chat platform better for real-time messaging. We hope slack can facilitate the interaction between group members. We have created a [Workspace for STAT 450](https://stat-450.slack.com). You will first need to join using the invitation link posted on Canvas.
+- **Canvas**: All course deliverables and information can be found on the [course's page on Canvas](https://canvas.ubc.ca/courses/151975). Please check the Canvas website regularly to keep up-to-date with the course.
+- **Slack**: Slack is a chat platform better for real-time messaging. We hope Slack can facilitate the interaction between group members. We have created a [Workspace for STAT 450](https://stat-450.slack.com). You will first need to join using the invitation link posted on Canvas.
 - **GitHub**: You will carry out assignments and group work using GitHub for code development and version control. 
 
 ### Course Structure
@@ -92,13 +92,13 @@ You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience
                 <td>10%</td>
             </tr>
             <tr>
-                <td>Group project</td>
+                <td>Group project (see table 2 for breakdown) </td>
                 <td>80%</td>
             </tr>
         </tbody>
     </table>
     <table>
-        <caption>Table 2: Project</caption>
+        <caption>Table 2: Group Project</caption>
         <thead>
             <tr>
                 <th>Deliverable</th>
