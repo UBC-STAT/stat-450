@@ -170,9 +170,24 @@ If you miss class, we suggest you to:
 
 #### Academic Integrity
 
-All students are expected to follow UBC's [Academic Honesty and Standards](http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,286,0,0#15620) policy. We encourage students to work together on assignments and labs, however all of your work must be written in your own words. Students must correctly cite references if you quote or use outside sources in your work, including any AI tools. Breach of the academic integrity policy may, at a minimum, result in a grade of 0 on the relevant assessment or may result in more serious consequences.
+All students are expected to follow UBC's [Academic Honesty and Standards](http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,286,0,0#15620) policy. In this course:
 
-Please see UBC's Academic Calendar for detailed policies on [Academic Misconduct](http://calendar.ubc.ca/vancouver/index.cfm?tree=3,54,111,0).
+* We encourage students to work together on assignments and labs, however all of your work must be written in your own words. Visit the [Learning Commons’ guide to academic integrity](http://learningcommons.ubc.ca/resource-guides/avoiding-plagiarism/) for support in understanding how to prevent unintentional plagiarism. 
+* Students must correctly cite references if you quote or use outside sources in your work, *including any generative AI tools* (see next section). 
+
+##### Use of generative artificial intelligence (AI) tools
+
+If you choose to use generative AI tools to complete coursework, *you must disclose your use of them*. This disclosure must be included at the top of the submission file for the assignment in which the generative AI tool was used. The disclosure should include the name of the tool and a brief description of how it was used. 
+
+Further, if you choose to use generative AI tools for coursework, you should be aware of the following:
+
+* Privacy implications: Information you input into some tools, along with some device data such as your IP address, may be sent to servers outside of Canada, which may put you or your client's intellectual property, sensitive study data, and/or personal information at risk. For this reason, **client data or specific details of the client's study may not be shared with generative AI tools**. For more information, please refer to [UBC's Privacy Impact Assessment for generative AI tools](https://ai.ctlt.ubc.ca/privacy-impact-assessments-for-generativeai-instructional-use-at-ubc/).
+
+* False or misleading information: Generative AI tools can produce biased, false or misleading content, because of the nature of the training datasets. They are designed to produce the most statistically plausible text result, not necessarily the correct one, and they cannot take responsibility for what they produce. You, on the other hand, must take responsibility for the accuracy and integrity of your written work: therefore, you should not consider the output of a generative AI tool to be reliable unless verified by information in scholarly sources, and the information included in your assignments must be found in and attributed to scholarly sources.
+
+##### What happens when academic integrity is breached?
+
+Breach of this academic integrity policy may, at a minimum, result in a grade of 0 on the relevant assessment or may result in more serious consequences. Please see UBC's Academic Calendar for detailed policies on [Academic Misconduct](http://calendar.ubc.ca/vancouver/index.cfm?tree=3,54,111,0). At any time: if you are unsure if a certain type of assistance is authorized, please ask us.  
 
 #### Health and Safety
 
