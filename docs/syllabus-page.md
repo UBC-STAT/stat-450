@@ -32,13 +32,14 @@ STAT 306. Restricted to 4th year Statistics majors.
 
 ### Contact
 
-|      Position      |         Name        |     
-|--------------------|---------------------|
-|     Instructor     |   Keegan Korthauer  |         
-|     Instructor     |     Melissa Lee     |          
-|     Instructor     | Rodolfo Lourenzutti |   
-| Writing Instructor |     Estella Qi      |
-| Teaching Assistant |   Gian Carlo Di-Luvi      |        
+|      Position      |         Name        |
+|---------------------|----------------------|
+|     Instructor     |   Grace Tompkins      |
+|     Instructor     |     Bruce Dunham      |
+|     Instructor     |     Payman Nickchi    |
+|     Instructor     | Rodolfo Lourenzutti   |
+| Writing Instructor |     Estella Qi        |
+| Teaching Assistant |   Gian Carlo Di-Luvi  |
 
 Please contact the instructors at stat450@stat.ubc.ca if you have personal or administrative questions that do not pertain to the course material (e.g., Centre for Accessibility registration, medical issues, mental health, special requests, etc).
 
