@@ -1,16 +1,18 @@
 ## Syllabus
-#### Winter Session 2024/25 Term 2
+#### Winter Session 2025/26 Term 2
 
 ### Time and Place
 
-- Lectures: Wed/Fri 9:00 am - 10:20 am (Building and Room number posted on Canvas)
-- Labs: Fridays 3:00 pm - 3:50 pm (Building and Room number posted on Canvas)
+- Lectures: Check Workday for current schedule and location.
+- Labs: Check Workday for current schedule and location.
 
 
 ### Course Description 
+
 This course provides the basic statistical toolkit required for the understanding and use of a range of methods for both summarizing and analyzing data, giving a platform for further study of applied Statistics. The emphasis in the course will be the application of these methods to real-life situations from Science.
  
 ### Course Objective
+
 To train students to apply their statistical knowledge to applied research problems, to develop skills of working with non-statisticians either as a consultant or as a collaborator, and to communicate effectively, both orally and in writing, with statisticians and non-statisticians. 
 
 Most course activities will be organized around a series of case studies based on recent and current applied research problems from different subject areas. Students will participate in: 
