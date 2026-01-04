@@ -122,7 +122,7 @@ You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience
                 <td style="text-align: right">10%</td>
             </tr>
             <tr>
-                <td style="text-align: left">Group Written 1st Report</td>
+                <td style="text-align: left">Individual Written 1st Report</td>
                 <td style="text-align: right">10%</td>
             </tr>
             <tr>
@@ -159,6 +159,10 @@ You can also get if for free [here](https://bookdown.org/rdpeng/artofdatascience
 - For the due dates and details of the assignments, refer to Canvas.
 
 ### Course Policies
+
+#### Late Submissions
+
+A penalty of 0.5% per hour will be given for assessments submitted beyond the due date, up to a maximum of 48 hours. After 48 hours, no submissions will be accepted and a grade of 0 will be awarded. 
 
 #### Academic Concession
 
