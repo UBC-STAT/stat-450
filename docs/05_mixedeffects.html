@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="05_mixedeffects_files/libs/clipboard/clipboard.min.js"></script>
+<script src="05_mixedeffects_files/libs/quarto-html/tabby.min.js"></script>
+<script src="05_mixedeffects_files/libs/quarto-html/popper.min.js"></script>
+<script src="05_mixedeffects_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="05_mixedeffects_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="05_mixedeffects_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="05_mixedeffects_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="05_mixedeffects_files/libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="05_mixedeffects_files/libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
+
+  <meta name="author" content="Grace Tompkins">
+  <meta name="dcterms.date" content="2026-02-04">
+  <title>STAT 450: Linear Mixed Effects Modelling</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="05_mixedeffects_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="05_mixedeffects_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="05_mixedeffects_files/libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link href="05_mixedeffects_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="05_mixedeffects_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="05_mixedeffects_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="05_mixedeffects_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script type="module" src="05_mixedeffects_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="05_mixedeffects_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+  <script src="coi-serviceworker.js"></script>
+  <script src="helper.js"></script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">STAT 450: Linear Mixed Effects Modelling</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Grace Tompkins 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-02-04</p>
+</section>
+<section id="lecture-goals" class="slide level2">
+<h2>Lecture Goals</h2>
+<p>By the end of this lecture, students should be able to:</p>
+<ul>
+<li>Identify violations of the independence assumption for ordinary linear regression</li>
+<li>Define mixed effects models with i) a “random intercept” and ii) a “random slope”</li>
+<li>Motivate the use of mixed effects models</li>
+<li>Recall R packages/functions that can be used to fit such models</li>
+</ul>
+<p>This lecture will include an interactive case study, performed directly in these slides.</p>
+</section>
+<section id="linear-fixed-effects-model" class="slide level2">
+<h2>Linear (Fixed-Effects) Model</h2>
+<ul>
+<li>In your previous courses, you have seen regression using ordinary least squares (OLS).
+<ul>
+<li><p>Given a set of <span class="math inline">\(k\)</span> covariates <span class="math inline">\(X_{ij}\)</span> and a continuous response <span class="math inline">\(Y_{ij}\)</span> for <span class="math inline">\(i = 1, ..., n\)</span>, the OLS model we fit is:</p>
+<p><span class="math display">\[
+Y_i = \beta_0 + \beta_1X_{i1} + \beta_2X_{i2} + ... + \beta_kX_{ik}
+\]</span></p></li>
+<li><p>The parameters <span class="math inline">\(\beta_0, \beta_1, ... \beta_k\)</span> are fixed and constant (i.e., they are the same for all observed values <span class="math inline">\(x_{i1}, ..., x_{ik}, y_{ik}\)</span></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="linear-fixed-effects-model-1" class="slide level2">
+<h2>Linear (Fixed-Effects) Model</h2>
+<ul>
+<li><p>In the OLS linear regression model, we have a number of assumptions:</p>
+<ul>
+<li><p>Linearity (there is a linear relationship)</p></li>
+<li><p>Independence of residuals</p></li>
+<li><p>Normality of residuals</p></li>
+<li><p>Homoscedasticity (constant variance)</p></li>
+<li><p>No multicolinearity</p></li>
+</ul></li>
+<li><p>Today we will focus on settings where the independence assumption is violated.</p></li>
+</ul>
+</section>
+<section id="case-study-grunfelds-investment-dataset" class="slide level2">
+<h2>Case Study: Grunfeld’s Investment Dataset</h2>
+<p><a href="https://www.proquest.com/docview/301899386?pq-origsite=summon&amp;accountid=14656">Grunfeld (1958)</a> collected data from eleven different American companies over the years 1935-1954 to study how gross investment depends on the firm’s value and capital stock. This dataset can be loaded from the <code>AER</code> package:</p>
+<div class="cell" data-persist="true">
+<div>
+<div id="webr-1" class="exercise-cell">
+
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoic2V0dXAiLCJwZXJzaXN0Ijp0cnVlfSwiY29kZSI6IlxubGlicmFyeShBRVIpXG5saWJyYXJ5KHRpZHl2ZXJzZSlcblxuZGF0YShHcnVuZmVsZCkgI2RhdGFzZXQgR3J1bmZlbGQgZnJvbSBBRVJcblxuI2NsZWFuIHVwIGNvbHVtbiBuYW1lc1xuZ3J1bmZlbGQgPC0gR3J1bmZlbGQgJT4lIFxuICByZW5hbWUoaW52ZXN0bWVudCA9IGludmVzdCwgbWFya2V0X3ZhbHVlID0gdmFsdWUpXG5cbmhlYWQoZ3J1bmZlbGQpIn0=
+</script>
+</div>
+</div>
+</section>
+<section id="case-study-grunfelds-investment-dataset-1" class="slide level2">
+<h2>Case Study: Grunfeld’s Investment Dataset</h2>
+<ul>
+<li>Suppose we are interested in examining the association between <code>investment</code> with <code>market_value</code> and <code>capital</code> within American firms. Are there any concerns with any of the OLS assumptions here, just based on the initial view of the data?</li>
+</ul>
+<div id="note-1" class="persistent-notes" contenteditable="true" style="border: 0.1px solid black; padding: 8px; font-size: 28px;">
+<p>Notes:</p>
+</div>
+</section>
+<section id="eda" class="slide level2">
+<h2>EDA</h2>
+<p>Let’s plot the 220 observations of <code>investment</code> versus <code>market value</code> <strong>facetted</strong> by <code>firm</code>.</p>
+<p>(Only for plotting: we will transform both axes on the logarithmic scale in base 10 (<code>trans = "log10"</code>). This allows us to compare those firms under dissimilar market values, capital, and gross investments)</p>
+<div class="cell" data-persist="true" data-exercise="EDA1">
+<div>
+<div id="webr-2" class="exercise-cell">
+
+</div>
+<script type="webr-2-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiRURBMSIsImZpZy1oZWlnaHQiOjEwLCJmaWctd2lkdGgiOjEwLCJsYWJlbCI6IkVEQTEiLCJwZXJzaXN0Ijp0cnVlfSwiY29kZSI6Ilxuc2NhdHRlcnBsb3RzX2Zpcm1fbWFya2V0X3ZhbHVlIDwtIGdydW5mZWxkIHw+XG4gIGdncGxvdChhZXMobWFya2V0X3ZhbHVlLCBpbnZlc3RtZW50KSkgK1xuICBnZW9tX3BvaW50KCkgK1xuICBnZW9tX3Ntb290aChtZXRob2QgPSBcImxtXCIsIGZ1bGxyYW5nZSA9IFRSVUUsIGZvcm11bGEgPSB5IH4geCwgc2UgPSBGQUxTRSkgK1xuICBmYWNldF93cmFwKH5maXJtKSArXG4gIGxhYnMoeCA9IFwiTWFya2V0IFZhbHVlIChNaWxsaW9ucyBvZiBBbWVyaWNhbiBEb2xsYXJzIG9uIGEgTG9nIFNjYWxlIGluIEJhc2UgMTApXCIsIFxuICAgICAgIHkgPSBcIkdyb3NzIEludmVzdG1lbnQgKE1pbGxpb25zIG9mIEFtZXJpY2FuIERvbGxhcnMgb24gYSBMb2cgU2NhbGUgaW4gQmFzZSAxMClcIikgK1xuICBnZ3RpdGxlKFwiU2NhdHRlcnBsb3RzIGJ5IEZpcm0gb2YgTWFya2V0IFZhbHVlIHZlcnN1cyBHcm9zcyBJbnZlc3RtZW50c1wiKSArXG4gIHRoZW1lKFxuICAgIHBsb3QudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDE5LCBmYWNlID0gXCJib2xkXCIpLFxuICAgIGF4aXMudGV4dCA9IGVsZW1lbnRfdGV4dChzaXplID0gMTQpLFxuICAgIGF4aXMudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDE4KSxcbiAgICBzdHJpcC50ZXh0LnggPSBlbGVtZW50X3RleHQoc2l6ZSA9IDE4KSxcbiAgKSArXG4gIHNjYWxlX3hfY29udGludW91cyh0cmFucyA9IFwibG9nMTBcIikgK1xuICBzY2FsZV95X2NvbnRpbnVvdXModHJhbnMgPSBcImxvZzEwXCIpXG5cbnNjYXR0ZXJwbG90c19maXJtX21hcmtldF92YWx1ZSJ9
+</script>
+</div>
+</div>
+</section>
+<section id="eda-1" class="slide level2">
+<h2>EDA</h2>
+<p>Now, let’s plot the 220 observations of <code>investment</code> versus <code>investment</code> <strong>facetted</strong> by <code>firm</code>.</p>
+<p>(Again: only for plotting, we will transform both axes on the logarithmic scale in base 10 (<code>trans = "log10"</code>). This allows us to compare those firms under dissimilar market values, capital, and gross investments)</p>
+<div class="cell" data-persist="true" data-exercise="EDA2">
+<div>
+<div id="webr-3" class="exercise-cell">
+
+</div>
+<script type="webr-3-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiRURBMiIsImZpZy1oZWlnaHQiOjEwLCJmaWctd2lkdGgiOjEwLCJsYWJlbCI6IkVEQTIiLCJwZXJzaXN0Ijp0cnVlfSwiY29kZSI6InNjYXR0ZXJwbG90c19maXJtX2NhcGl0YWwgPC0gZ3J1bmZlbGQgfD5cbiAgZ2dwbG90KGFlcyhjYXBpdGFsLCBpbnZlc3RtZW50KSkgK1xuICBnZW9tX3BvaW50KCkgK1xuICBnZW9tX3Ntb290aChtZXRob2QgPSBcImxtXCIsIGZ1bGxyYW5nZSA9IFRSVUUsIGZvcm11bGEgPSB5IH4geCwgc2UgPSBGQUxTRSkgK1xuICBmYWNldF93cmFwKH5maXJtKSArXG4gIGxhYnMoeCA9IFwiQ2FwaXRhbCAoTWlsbGlvbnMgb2YgQW1lcmljYW4gRG9sbGFycyBvbiBhIExvZyBTY2FsZSBpbiBCYXNlIDEwKVwiLCBcbiAgICAgICB5ID0gXCJHcm9zcyBJbnZlc3RtZW50IChNaWxsaW9ucyBvZiBBbWVyaWNhbiBEb2xsYXJzIG9uIGEgTG9nIFNjYWxlIGluIEJhc2UgMTApXCIpICtcbiAgZ2d0aXRsZShcIlNjYXR0ZXJwbG90cyBieSBGaXJtIG9mIENhcGl0YWwgdmVyc3VzIEdyb3NzIEludmVzdG1lbnRzXCIpICtcbiAgdGhlbWUoXG4gICAgcGxvdC50aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMTksIGZhY2UgPSBcImJvbGRcIiksXG4gICAgYXhpcy50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemUgPSAxNCksXG4gICAgYXhpcy50aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMTgpLFxuICAgIHN0cmlwLnRleHQueCA9IGVsZW1lbnRfdGV4dChzaXplID0gMTgpLFxuICApICtcbiAgc2NhbGVfeF9jb250aW51b3VzKHRyYW5zID0gXCJsb2cxMFwiKSArXG4gIHNjYWxlX3lfY29udGludW91cyh0cmFucyA9IFwibG9nMTBcIilcblxuc2NhdHRlcnBsb3RzX2Zpcm1fY2FwaXRhbCJ9
+</script>
+</div>
+</div>
+</section>
+<section id="observations-from-the-eda" class="slide level2">
+<h2>Observations from the EDA</h2>
+<div id="note-2" class="persistent-notes" contenteditable="true" style="border: 0.1px solid black; padding: 8px; font-size: 28px;">
+<p>Notes:</p>
+</div>
+</section>
+<section id="possible-strategies-using-ols-regression" class="slide level2">
+<h2>Possible Strategies using OLS Regression</h2>
+<ul>
+<li>Add <code>firm</code> as a covariate, allowing for different intercepts for each firm.</li>
+<li>Add interaction terms with <code>firm</code>, allowing for different slopes and intercepts for each firm.</li>
+</ul>
+<p>What are your thoughts on these approaches? Are any assumptions still violated in this modelling framework?</p>
+<div id="note-3" class="persistent-notes" contenteditable="true" style="border: 0.1px solid black; padding: 8px; font-size: 28px;">
+<p>Notes:</p>
+</div>
+</section>
+<section id="motivation-for-mixed-effects-models" class="slide level2">
+<h2>Motivation for Mixed Effects Models</h2>
+<p>Mixed Effects Models cleverly handle:</p>
+<ul>
+<li>nested structures (students could be sampled within classrooms, or patients within doctors/hospitals)</li>
+<li>repeated measures</li>
+<li>other correlations within groups that violate the independence assumption</li>
+</ul>
+<p>This means:</p>
+<ul>
+<li><p>Observations in our data set do not need to be independent</p></li>
+<li><p>Your data can have subsets of elements share a correlation structure (e.g., repeated observations over time, clustered data)</p>
+<ul>
+<li>In our <code>grunfeld</code> data set, we have repeated observations over time within a firm</li>
+</ul></li>
+</ul>
+</section>
+<section id="linear-mixed-effects-models-lmem" class="slide level2">
+<h2>Linear Mixed Effects Models (LMEM)</h2>
+<p>In the LMEM, we incorporate <strong>fixed</strong> and <strong>random</strong> effects.</p>
+<ul>
+<li><strong>Fixed effects</strong> are parameters that do not vary. These are what we estimate in a typical linear regression model using OLS.</li>
+<li><strong>Random effects</strong> are parameters that are themselves random variables. These have an assumed distribution.
+<ul>
+<li>We can have both random slopes and intercepts in these models</li>
+</ul></li>
+</ul>
+</section>
+<section id="linear-mixed-effects-models-lmem-1" class="slide level2">
+<h2>Linear Mixed Effects Models (LMEM)</h2>
+<p>LMEM model: <span class="math display">\[
+\boldsymbol{Y}_i = \boldsymbol{X}_i \boldsymbol{\beta} + \boldsymbol{Z}_i\boldsymbol{b}_i + \boldsymbol{\epsilon}_i,
+\]</span></p>
+<p>such that</p>
+<p><span class="math display">\[
+\boldsymbol{Y}_i = \begin{bmatrix}
+Y_{i1} \\
+Y_{i2} \\
+\vdots \\
+Y_{i,k_i}\\
+\end{bmatrix} ,    \boldsymbol{X}_i = \begin{bmatrix}
+\boldsymbol{X}_{i1}^T\\
+\boldsymbol{X}_{i2}^T \\
+\vdots \\
+\boldsymbol{X}_{i, k_i}^T\\
+\end{bmatrix}, \boldsymbol{Z}_i = \begin{bmatrix}
+\boldsymbol{Z}_{i1}^T\\
+\boldsymbol{Z}_{i2}^T \\
+\vdots \\
+\boldsymbol{Z}_{i, k_i}^T\\
+\end{bmatrix}, \text{     and } \boldsymbol{\epsilon}_i = \begin{bmatrix}
+\epsilon_{i1}^T\\
+\epsilon_{i2}^T\\
+\vdots\\
+\epsilon_{i,k_i}^T
+\end{bmatrix},
+\]</span> where</p>
+<ul>
+<li><span class="math inline">\(k_i\)</span>: the number of observations for subject <span class="math inline">\(i\)</span>, which may differ among subjects.</li>
+<li><span class="math inline">\(Y_{ij}\)</span>: the response of individual <span class="math inline">\(i\)</span> at time <span class="math inline">\(j\)</span>,</li>
+<li><span class="math inline">\(\boldsymbol{X}_{ij}\)</span>: a <span class="math inline">\(p \times 1\)</span> covariate vector for the fixed effects,</li>
+<li><span class="math inline">\(\boldsymbol{\beta}\)</span>: the vector of parameters for the fixed effects,</li>
+<li><span class="math inline">\(\boldsymbol{Z}_{ij}\)</span>: a <span class="math inline">\(q \times 1\)</span> covariate vector for the random effects,</li>
+<li><span class="math inline">\(\boldsymbol{b}_{ij}\)</span>: a vector of parameters for the random effects, and</li>
+<li><span class="math inline">\(\epsilon_{ij}\)</span>: the random error associated with individual <span class="math inline">\(i\)</span> at time <span class="math inline">\(j\)</span>.</li>
+</ul>
+</section>
+<section id="linear-mixed-effects-models-random-intercepts" class="slide level2">
+<h2>Linear Mixed Effects Models: Random Intercepts</h2>
+<p>Let’s start with the simplest for of our LMEM and allow for a random intercept.</p>
+<p>What does this mean? Our general model will be:</p>
+<p><span class="math display">\[
+Y_{ij} = X_{ij}\beta_{ij} + b_{i,0} + \epsilon_{ij},
+\]</span> where <span class="math inline">\(b_{i, 0}\)</span> is the <span class="math inline">\(i\)</span>th cluster/individual’s random intercept.</p>
+<p><br></p>
+<p>Relating this back to <code>grunfeld</code>, we could have a <strong>random intercept</strong> for each firm:</p>
+<p><span class="math display">\[
+\text{investment}_{ij} = \beta_0 + \beta_1 \text{market_value}_{ij} + \beta_2 \text{capital}_{ij} + b_{i,0} + \epsilon_{ij},
+\]</span></p>
+<p>where <span class="math inline">\(i = 1, 2, ..., 11\)</span> is an individual firm (there are 11 in the data) and <span class="math inline">\(j= 1, 2, ..., n_{i}\)</span> is the observation number from each firm (these vary for each firm!)</p>
+</section>
+<section id="linear-mixed-effects-models-random-intercepts-1" class="slide level2">
+<h2>Linear Mixed Effects Models: Random Intercepts</h2>
+<p><span class="math inline">\(b_{0, i}\)</span> is a random effect which has a distribution. We assume:</p>
+<p><span class="math display">\[
+b_{0, i} \sim N(0, \sigma_0^2)
+\]</span></p>
+<p>We also assume <span class="math inline">\(\epsilon_{ij} \sim N(0, \sigma^2)\)</span>, allowing for observations within a given firm to be correlated. We also assume that this error term is independent of any random effects.</p>
+</section>
+<section id="linear-mixed-effects-models-random-intercepts-2" class="slide level2">
+<h2>Linear Mixed Effects Models: Random Intercepts</h2>
+<p>Let’s rearrange the LMEM:</p>
+<p><span class="math display">\[
+\text{investment}_{ij} = (\beta_0+b_{i,0}) + \beta_1 \text{market_value}_{ij} + \beta_2 \text{capital}_{ij}  + \epsilon_{ij},
+\]</span></p>
+<p>Our “mixed intercept” is comprised of the overall fixed intercept (<span class="math inline">\(\beta_0\)</span>) and a firm-specific random intercept (<span class="math inline">\(b_{i, 0}\)</span>). That is, individual firms have unique intercepts that are offset from the overall average intercept.</p>
+</section>
+<section id="so-how-does-this-allow-for-correlated-observations" class="slide level2">
+<h2>So… how does this allow for correlated observations?</h2>
+<p>Well, the variance of the <span class="math inline">\(j\)</span>th observation for the <span class="math inline">\(i\)</span>th firm is:</p>
+<p><span class="math display">\[
+\text{Var}(\text{investment}_{i,j}) = \text{Var}(b_{i, 0}) + \text{Var}(\epsilon_{ij})
+\]</span> and within a single firm, we can show that the correlation is given by:</p>
+<p><span class="math display">\[
+\text{Corr}(\text{investment}_{i,k}, \text{investment}_{i, l}) = \frac{\sigma_0^2}{\sigma_0^2 + \sigma^2}
+\]</span></p>
+</section>
+<section id="model-fitting-in-r" class="slide level2">
+<h2>Model Fitting in R</h2>
+<p>Linear mixed effects models can be fit using the <code>lmer()</code> function from the <code>lme4</code> package.</p>
+<p>Recall the model:</p>
+<p><span class="math display">\[
+\text{investment}_{ij} = (\beta_0+b_{i,0}) + \beta_1 \text{market_value}_{ij} + \beta_2 \text{capital}_{ij}  + \epsilon_{ij},
+\]</span></p>
+<p>To fit a model with a random intercept for each firm, we specify the term <code>(1 | firm)</code> in the model formula:</p>
+<div class="cell">
+<div>
+<div id="webr-4" class="exercise-cell">
+
+</div>
+<script type="webr-4-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibGlicmFyeShsbWU0KVxubWl4ZWRfaW50ZXJjZXB0X21vZGVsIDwtIGxtZXIoaW52ZXN0bWVudCB+IG1hcmtldF92YWx1ZSArIGNhcGl0YWwgKyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKDEgfCBmaXJtKSwgZGF0YSA9IGdydW5mZWxkKVxuc3VtbWFyeShtaXhlZF9pbnRlcmNlcHRfbW9kZWwpIn0=
+</script>
+</div>
+</div>
+<p>How to read this model output:</p>
+<p>The content under <code>Random effects:</code> provides us with estimates of <span class="math inline">\(\hat{\sigma_0}\)</span> and <span class="math inline">\(\hat{\sigma}\)</span>, respectively. The content under <code>Fixed effects</code> provides us estimates of our <span class="math inline">\(\beta\)</span>s</p>
+</section>
+<section id="linear-mixed-effects-models-random-slopes-and-intercepts" class="slide level2">
+<h2>Linear Mixed Effects Models: Random Slopes and Intercepts</h2>
+<p>In our previous visualizations, you could argue that the slopes of the individual firms also varied. We can add random effects for our covariates as well:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{investment}_{ij} &amp;= \beta_0 + \beta_1 \text{market_value}_{ij} + \beta_2 \text{capital}_{ij} +b_{i,0} + b_{i, 1}\text{market_value}_{ij} + b_{i, 2}\text{capital}_{ij} + \epsilon_{ij}, \\
+&amp;= (\beta_0 + b_{i,0}) + (\beta_1 + b_{i, 1}) \text{market_value}_{ij} + (\beta_2 + b_{i,2}) \text{capital}_{ij} + \epsilon_{ij}
+\end{aligned}
+\]</span> Now we have mixed intercept and slopes that comprise of random and fixed effects!</p>
+<p>What has changed in our model assumptions? Well, <span class="math inline">\(b_{i,0}, b_{i,1},\)</span> and <span class="math inline">\(b_{i,2}\)</span> follow a <a href="https://ubc-mds.github.io/DSCI_562_regr-2/notes/appendix-binary-multivariate-normal.html">multivariate Gaussian distribution</a> with <span class="math inline">\(d = 3\)</span> and covariance matrix <span class="math inline">\(D\)</span>. More info <a href="https://ubc-mds.github.io/DSCI_562_regr-2/notes/lecture4_linear_mixed_effects_models.html#what-is-this-generic-covariance-matrix-mathbf-d">here</a></p>
+</section>
+<section id="model-fitting-in-r-1" class="slide level2">
+<h2>Model Fitting in R</h2>
+<p>Linear mixed effects models can be fit using the <code>lmer()</code> function from the <code>lme4</code> package.</p>
+<p>Recall the model:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{investment}_{ij} &amp;=
+&amp;= (\beta_0 + b_{i,0}) + (\beta_1 + b_{i, 1}) \text{market_value}_{ij} + (\beta_2 + b_{i,2}) \text{capital}_{ij} + \epsilon_{ij}
+\end{aligned}
+\]</span></p>
+<p>To fit a model with a random slopes and intercepts for each firm, we specify the term <code>(market_value + capital | firm)</code> in the model formula:</p>
+<div class="cell">
+<div>
+<div id="webr-5" class="exercise-cell">
+
+</div>
+<script type="webr-5-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibGlicmFyeShsbWU0KVxubWl4ZWRfc2xvcGVzX21vZGVsIDwtIGxtZXIoaW52ZXN0bWVudCB+IG1hcmtldF92YWx1ZSArIGNhcGl0YWwgKyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgKG1hcmtldF92YWx1ZSArIGNhcGl0YWwgfCBmaXJtKSwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBncnVuZmVsZClcbnN1bW1hcnkobWl4ZWRfc2xvcGVzX21vZGVsKSJ9
+</script>
+</div>
+</div>
+</section>
+<section id="model-selection" class="slide level2">
+<h2>Model Selection</h2>
+<p>We cannot simply determine if the random slopes should be included in the model by evaluating <span class="math inline">\(p\)</span>-values from the model output.</p>
+<p>Instead, we can perform a likelihood ratio test (LRT) to see if the model fit with the random slopes is more appropriate for this data (compared to the model without the slopes)</p>
+<p>The null hypothesis for this test is that the simpler model is adequate.</p>
+<div class="cell">
+<div>
+<div id="webr-6" class="exercise-cell">
+
+</div>
+<script type="webr-6-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiYW5vdmEobWl4ZWRfc2xvcGVzX21vZGVsLCBtaXhlZF9pbnRlcmNlcHRfbW9kZWwpICNwZXJmb3JtICJ9
+</script>
+</div>
+</div>
+<p>We see the <span class="math inline">\(p\)</span>-value is very small, indicating that we reject the null hypothesis that the simpler model is adequate (i.e., we should include the random slopes!)</p>
+<p><em>Note: models must be nested and have the same fixed effects to do this test. You can compare the AIC or BIC to compare non-nested models. </em></p>
+
+<script type="webr-data">
+eyJvcHRpb25zIjp7ImJhc2VVcmwiOiJodHRwczovL3dlYnIuci13YXNtLm9yZy92MC41LjQvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsiZXZhbHVhdGUiLCJrbml0ciIsImh0bWx0b29scyIsInRpZHl2ZXJzZSIsIkFFUiIsImxtZTQiXSwicmVwb3MiOltdfSwicmVuZGVyX2RmIjoiZGVmYXVsdCJ9
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV82O1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItNiIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzYgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici02LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHdlYnItNi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV82ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl82LCB7fSk7XG4ifSx7ImNlbGxOYW1lIjoid2Vici13aWRnZXQtNSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfNTtcbiAgaWYgKHdpbmRvdy5IVE1MV2lkZ2V0cykge1xuICAgIHdpbmRvdy5IVE1MV2lkZ2V0cy5zdGF0aWNSZW5kZXIoKTtcbiAgfVxuICBpZiAod2luZG93LlBhZ2VkVGFibGVEb2MpIHtcbiAgICB3aW5kb3cuUGFnZWRUYWJsZURvYy5pbml0QWxsKCk7XG4gIH1cbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLTUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl81ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItNS1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKHsgaWQ6IGB3ZWJyLTUtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuXG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxuX3dlYnJfdmFsdWVfNSA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfNSwge30pO1xuIn0seyJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTQiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzQ7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici00IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfd2Vicl9lZGl0b3JfNCA9IHtcbiAgY29uc3QgeyBXZWJSRXhlcmNpc2VFZGl0b3IsIGI2NERlY29kZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLTQtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici00LWNvbnRlbnRzYCB9LCBibG9jay5hdHRyKTtcbiAgY29uc3QgZWRpdG9yID0gbmV3IFdlYlJFeGVyY2lzZUVkaXRvcih3ZWJST2pzLndlYlJQcm9taXNlLCBibG9jay5jb2RlLCBvcHRpb25zKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl93ZWJyX3ZhbHVlXzQgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzQsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV8zO1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItMyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzMgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici0zLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgLy8gRGVmYXVsdCBleGVyY2lzZSBjb25maWd1cmF0aW9uXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKFxuICAgIHtcbiAgICAgIGlkOiBcIndlYnItMy1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzMgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzMsIHt9KTtcbl93ZWJyX2ZlZWRiYWNrXzMgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzMuZXZhbHVhdG9yKTtcbiAgY29uc3QgZmVlZGJhY2sgPSBhd2FpdCBncmFkZXIuZ3JhZGVFeGVyY2lzZSgpO1xuICBpZiAoIWZlZWRiYWNrKSByZXR1cm4gZW1wdHlGZWVkYmFjaztcbiAgcmV0dXJuIGZlZWRiYWNrO1xufVxuIn0seyJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzI7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0yIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfd2Vicl9lZGl0b3JfMiA9IHtcbiAgY29uc3QgeyBXZWJSRXhlcmNpc2VFZGl0b3IsIGI2NERlY29kZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLTItY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0yLWNvbnRlbnRzXCIsXG4gICAgICBlbnZpcjogYGV4ZXJjaXNlLWVudi0ke2Jsb2NrLmF0dHIuZXhlcmNpc2V9YCxcbiAgICAgIGVycm9yOiBmYWxzZSxcbiAgICAgIGNhcHRpb246ICdFeGVyY2lzZScsXG4gICAgfSxcbiAgICBibG9jay5hdHRyXG4gICk7XG5cbiAgY29uc3QgZWRpdG9yID0gbmV3IFdlYlJFeGVyY2lzZUVkaXRvcih3ZWJST2pzLndlYlJQcm9taXNlLCBibG9jay5jb2RlLCBvcHRpb25zKTtcbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG52aWV3b2YgX3dlYnJfdmFsdWVfMiA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMiwge30pO1xuX3dlYnJfZmVlZGJhY2tfMiA9IHtcbiAgY29uc3QgeyBXZWJSR3JhZGVyIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBlbXB0eUZlZWRiYWNrID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XG5cbiAgY29uc3QgZ3JhZGVyID0gbmV3IFdlYlJHcmFkZXIoX3dlYnJfdmFsdWVfMi5ldmFsdWF0b3IpO1xuICBjb25zdCBmZWVkYmFjayA9IGF3YWl0IGdyYWRlci5ncmFkZUV4ZXJjaXNlKCk7XG4gIGlmICghZmVlZGJhY2spIHJldHVybiBlbXB0eUZlZWRiYWNrO1xuICByZXR1cm4gZmVlZGJhY2s7XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici13aWRnZXQtMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTtcbiAgaWYgKHdpbmRvdy5IVE1MV2lkZ2V0cykge1xuICAgIHdpbmRvdy5IVE1MV2lkZ2V0cy5zdGF0aWNSZW5kZXIoKTtcbiAgfVxuICBpZiAod2luZG93LlBhZ2VkVGFibGVEb2MpIHtcbiAgICB3aW5kb3cuUGFnZWRUYWJsZURvYy5pbml0QWxsKCk7XG4gIH1cbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMS1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKHsgaWQ6IGB3ZWJyLTEtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuXG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxuX3dlYnJfdmFsdWVfMSA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMSwge30pO1xuIn0seyJjZWxsTmFtZSI6IndlYnItcHJlbHVkZSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IndlYlJPanMgPSB7XG4gIGNvbnN0IHsgV2ViUiwgQ2hhbm5lbFR5cGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWUuV2ViUjtcbiAgY29uc3Qge1xuICAgIFdlYlJFdmFsdWF0b3IsXG4gICAgV2ViUkVudmlyb25tZW50TWFuYWdlcixcbiAgICBzZXR1cFIsXG4gICAgYjY0RGVjb2RlLFxuICAgIGNvbGxhcHNlUGF0aFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gd2ViUiBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICAvLyBVc2UgUG9zdE1lc3NhZ2UgY2hhbm5lbCBmb3IgYXN5bmMgY29tbXVuaWNhdGlvblxuICAvLyBXZSBkbyBub3QgZXhwZWN0IHRvIHRha2UgbmVzdGVkIHByb21wdCBpbnB1dCBpbiBRdWFydG8gTGl2ZSBjZWxsc1xuICBkYXRhLm9wdGlvbnMuY2hhbm5lbFR5cGUgPSBDaGFubmVsVHlwZS5Qb3N0TWVzc2FnZTtcblxuICAvLyBJbml0aWFsaXNlIHdlYlIgYW5kIHNldHVwIGZvciBSIGNvZGUgZXZhbHVhdGlvblxuICBsZXQgd2ViUlByb21pc2UgPSAoYXN5bmMgKHdlYlIpID0+IHtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHdlYlJgO1xuICAgIGF3YWl0IHdlYlIuaW5pdCgpO1xuXG4gICAgLy8gSW5zdGFsbCBwcm92aWRlZCBsaXN0IG9mIHBhY2thZ2VzXG4gICAgLy8gRW5zdXJlIHdlYlIgZGVmYXVsdCByZXBvIGlzIGluY2x1ZGVkXG4gICAgZGF0YS5wYWNrYWdlcy5yZXBvcy5wdXNoKFwiaHR0cHM6Ly9yZXBvLnItd2FzbS5vcmdcIilcbiAgICBhd2FpdCBkYXRhLnBhY2thZ2VzLnBrZ3MubWFwKChwa2cpID0+ICgpID0+IHtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcGFja2FnZTogJHtwa2d9YDtcbiAgICAgIHJldHVybiB3ZWJSLmV2YWxSVm9pZChgXG4gICAgICAgIHdlYnI6Omluc3RhbGwocGtnLCByZXBvcyA9IHJlcG9zKVxuICAgICAgICBsaWJyYXJ5KHBrZywgY2hhcmFjdGVyLm9ubHkgPSBUUlVFKVxuICAgICAgYCwgeyBlbnY6IHtcbiAgICAgICAgcGtnOiBwa2csXG4gICAgICAgIHJlcG9zOiBkYXRhLnBhY2thZ2VzLnJlcG9zLFxuICAgICAgfX0pO1xuICAgIH0pLnJlZHVjZSgoY3VyLCBuZXh0KSA9PiBjdXIudGhlbihuZXh0KSwgUHJvbWlzZS5yZXNvbHZlKCkpO1xuXG4gICAgLy8gRG93bmxvYWQgYW5kIGluc3RhbGwgcmVzb3VyY2VzXG4gICAgYXdhaXQgZmlsZXMubWFwKChmaWxlKSA9PiBhc3luYyAoKSA9PiB7XG4gICAgICBjb25zdCBuYW1lID0gZmlsZS5zdWJzdHJpbmcoZmlsZS5sYXN0SW5kZXhPZignLycpICsgMSk7XG4gICAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHJlc291cmNlOiAke25hbWV9YDtcbiAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goZmlsZSk7XG4gICAgICBpZiAoIXJlc3BvbnNlLm9rKSB7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgQ2FuJ3QgZG93bmxvYWQgXFxgJHtmaWxlfVxcYC4gRXJyb3IgJHtyZXNwb25zZS5zdGF0dXN9OiBcIiR7cmVzcG9uc2Uuc3RhdHVzVGV4dH1cIi5gKTtcbiAgICAgIH1cbiAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5hcnJheUJ1ZmZlcigpO1xuXG4gICAgICAvLyBTdG9yZSBVUkxzIGluIHRoZSBjd2Qgd2l0aG91dCBhbnkgc3ViZGlyZWN0b3J5IHN0cnVjdHVyZVxuICAgICAgaWYgKGZpbGUuaW5jbHVkZXMoXCI6Ly9cIikpIHtcbiAgICAgICAgZmlsZSA9IG5hbWU7XG4gICAgICB9XG5cbiAgICAgIC8vIENvbGxhcHNlIGhpZ2hlciBkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBmaWxlID0gY29sbGFwc2VQYXRoKGZpbGUpO1xuXG4gICAgICAvLyBDcmVhdGUgZGlyZWN0b3J5IHRyZWUsIGlnbm9yaW5nIFwiZGlyZWN0b3J5IGV4aXN0c1wiIFZGUyBlcnJvcnNcbiAgICAgIGNvbnN0IHBhcnRzID0gZmlsZS5zcGxpdCgnLycpLnNsaWNlKDAsIC0xKTtcbiAgICAgIGxldCBwYXRoID0gJyc7XG4gICAgICB3aGlsZSAocGFydHMubGVuZ3RoID4gMCkge1xuICAgICAgICBwYXRoICs9IHBhcnRzLnNoaWZ0KCkgKyAnLyc7XG4gICAgICAgIGNvbnN0IGFuYWx5c2lzID0gYXdhaXQgd2ViUi5GUy5hbmFseXplUGF0aChwYXRoKTtcbiAgICAgICAgaWYgKCFhbmFseXNpcy5leGlzdHMpIHtcbiAgICAgICAgICB0cnkge1xuICAgICAgICAgICAgYXdhaXQgd2ViUi5GUy5ta2RpcihwYXRoKTtcbiAgICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYEZpbGVzeXN0ZW0gRXJyb3I6IFwiJHtlLm1lc3NhZ2V9XCIuYCk7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC8vIFdyaXRlIHRoaXMgZmlsZSB0byB0aGUgVkZTXG4gICAgICByZXR1cm4gYXdhaXQgd2ViUi5GUy53cml0ZUZpbGUoZmlsZSwgbmV3IFVpbnQ4QXJyYXkoZGF0YSkpO1xuICAgIH0pLnJlZHVjZSgoY3VyLCBuZXh0KSA9PiBjdXIudGhlbihuZXh0KSwgUHJvbWlzZS5yZXNvbHZlKCkpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBJbnN0YWxsaW5nIHdlYlIgc2hpbXNgO1xuICAgIGF3YWl0IHdlYlIuZXZhbFJWb2lkKGB3ZWJyOjpzaGltX2luc3RhbGwoKWApO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBXZWJSIGVudmlyb25tZW50IHNldHVwYDtcbiAgICBhd2FpdCBzZXR1cFIod2ViUiwgZGF0YSk7XG5cbiAgICBzdGF0dXNUZXh0LnJlbW92ZSgpO1xuICAgIGlmIChzdGF0dXNDb250YWluZXIuY2hpbGRyZW4ubGVuZ3RoID09IDApIHtcbiAgICAgIHN0YXR1c0NvbnRhaW5lci5wYXJlbnROb2RlLnJlbW92ZSgpO1xuICAgIH1cbiAgICByZXR1cm4gd2ViUjtcbiAgfSkobmV3IFdlYlIoZGF0YS5vcHRpb25zKSk7XG5cbiAgLy8gS2VlcCB0cmFjayBvZiBpbml0aWFsIE9KUyBibG9jayByZW5kZXJcbiAgY29uc3QgcmVuZGVyZWRPanMgPSB7fTtcblxuICBjb25zdCBwcm9jZXNzID0gYXN5bmMgKGNvbnRleHQsIGlucHV0cykgPT4ge1xuICAgIGNvbnN0IHdlYlIgPSBhd2FpdCB3ZWJSUHJvbWlzZTtcbiAgICBjb25zdCBldmFsdWF0b3IgPSBuZXcgV2ViUkV2YWx1YXRvcih3ZWJSLCBjb250ZXh0KVxuICAgIGF3YWl0IGV2YWx1YXRvci5wcm9jZXNzKGlucHV0cyk7XG4gICAgcmV0dXJuIGV2YWx1YXRvci5jb250YWluZXI7XG4gIH1cblxuICByZXR1cm4ge1xuICAgIHByb2Nlc3MsXG4gICAgd2ViUlByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gIH07XG59XG4ifV19
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="05_mixedeffects_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="05_mixedeffects_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"right","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"wide"},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W119
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../..";
+    window._ojs.paths.runtimeToRoot = "../../..";
+    window._ojs.paths.docToRoot = "";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
